@@ -18,7 +18,7 @@ export default {
   },
   repository: {
     name: 'Blackbyte Sugar',
-    url: 'https://github.com/Blackbytespace/website-sugar',
+    url: 'https://github.com/Blackbytespace/sugar',
   },
   og: {
     imageUrl: 'https://cdn.blackbyte.space/img/blackbyte-sugar-og.png',
@@ -29,19 +29,11 @@ export default {
       label: 'Documentation',
       items: [
         {
-          id: 'install',
+          id: 'get-started',
           label: 'Get started',
           description: 'Quick start using @blackbyte/sugar',
-          value: 'install',
-          slug: '/#install',
-          preventSet: true,
-        },
-        {
-          id: 'changelog',
-          label: 'Changelog',
-          description: "What's new in @blackbyte/sugar",
-          value: 'changelog',
-          slug: '/changelog',
+          value: 'get-started',
+          slug: '/#get-started',
           preventSet: true,
         },
         {
@@ -49,7 +41,7 @@ export default {
           label: 'Declare an issue',
           description: 'Report a bug or request a feature',
           value: 'issue',
-          url: 'https://github.com/Blackbytespace/website-sugar/issues',
+          url: 'https://github.com/Blackbytespace/sugar/issues',
           preventSet: true,
         },
         {
@@ -57,7 +49,7 @@ export default {
           label: 'GitHub repository',
           description: 'Browse the source code on GitHub',
           value: 'repository',
-          url: 'https://github.com/Blackbytespace/website-sugar',
+          url: 'https://github.com/Blackbytespace/sugar',
           preventSet: true,
         },
         {
@@ -65,7 +57,7 @@ export default {
           label: 'License',
           description: 'View the license information',
           value: 'license',
-          url: 'https://github.com/blackbytespace/monorepo/blob/main/packages/sugar/LICENSE.md',
+          url: 'https://github.com/Blackbytespace/monorepo/blob/main/LICENSE.md',
           preventSet: true,
         },
       ],

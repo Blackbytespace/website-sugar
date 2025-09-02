@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Sugar Website
 
 ```sh
 npm create astro@latest -- --template basics

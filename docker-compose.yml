@@ -7,5 +7,5 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - /dist:/home/static
+      - ./dist:/home/static
       # - ./httpd.conf:/home/static/httpd.conf:ro

@@ -18,7 +18,7 @@ export default {
   },
   repository: {
     name: 'Blackbyte Sugar',
-    url: 'https://github.com/blackbytespace/monorepo',
+    url: 'https://github.com/Blackbytespace/website-sugar',
   },
   og: {
     imageUrl: 'https://cdn.blackbyte.space/img/blackbyte-sugar-og.png',
@@ -33,7 +33,7 @@ export default {
           label: 'Get started',
           description: 'Quick start using @blackbyte/sugar',
           value: 'install',
-          slug: '/',
+          slug: '/#install',
           preventSet: true,
         },
         {
@@ -49,7 +49,7 @@ export default {
           label: 'Declare an issue',
           description: 'Report a bug or request a feature',
           value: 'issue',
-          url: 'https://github.com/blackbytespace/monorepo/issues',
+          url: 'https://github.com/Blackbytespace/website-sugar/issues',
           preventSet: true,
         },
         {
@@ -57,7 +57,7 @@ export default {
           label: 'GitHub repository',
           description: 'Browse the source code on GitHub',
           value: 'repository',
-          url: 'https://github.com/blackbytespace/monorepo/issues',
+          url: 'https://github.com/Blackbytespace/website-sugar',
           preventSet: true,
         },
         {

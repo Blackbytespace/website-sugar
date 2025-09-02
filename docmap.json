@@ -6118,36 +6118,6 @@
                     },
                     "description": "The flatten object"
                 },
-                "setting": {
-                    "separation": {
-                        "name": "separation",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "String"
-                                }
-                            ],
-                            "raw": "String"
-                        },
-                        "description": "The separation character to use for preperty names",
-                        "default": ".",
-                        "defaultStr": "\".\""
-                    },
-                    "prefix": {
-                        "name": "prefix",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "String"
-                                }
-                            ],
-                            "raw": "String"
-                        },
-                        "description": "A prefix to add to the property names",
-                        "default": "\"\"",
-                        "defaultStr": "\"\""
-                    }
-                },
                 "platform": [
                     {
                         "name": "js",
@@ -6182,6 +6152,12 @@
                     "email": "olivier.bossel@gmail.com",
                     "url": "https://blackbyte.space"
                 },
+                "see": [
+                    {
+                        "url": ".",
+                        "description": "https://www.npmjs.com/package/flat"
+                    }
+                ],
                 "filename": "flatten.ts",
                 "extension": "ts",
                 "relPath": "src/shared/object/flatten.ts",
@@ -6627,6 +6603,12 @@
                     "email": "olivier.bossel@gmail.com",
                     "url": "https://blackbyte.space"
                 },
+                "see": [
+                    {
+                        "url": "https://www.npmjs.com/package/flat",
+                        "description": ""
+                    }
+                ],
                 "filename": "deepize.ts",
                 "extension": "ts",
                 "relPath": "src/shared/object/deepize.ts",

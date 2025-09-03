@@ -31,7 +31,7 @@ import './getStarted.css';
     </p>
   </header>
 
-  <div class="get-started_steps">
+  <div class="get-started_steps" style="--step-idx: 0">
     <div class="get-started_step">
       <div class="get-started_step-metas">
         <h3 class="typo-h3">
@@ -41,10 +41,12 @@ import './getStarted.css';
           You can install <code>@blackbyte/sugar</code> using npm, yarn or pnpm.
         </p>
       </div>
-      <Code language="bash" header code="npm install @blackbyte/sugar" />
+      <div class="get-started_step-value">
+          <Code language="bash" header code="npm install @blackbyte/sugar" />
+      </div>
     </div>
 
-    <div class="get-started_step">
+    <div class="get-started_step" style="--step-idx: 1">
       <div class="get-started_step-metas">
         <h3 class="typo-h3">
           <span class="get-started_step-number">2.</span> Discover the API
@@ -54,14 +56,16 @@ import './getStarted.css';
           to search for available functions.
         </p>
       </div>
-      <div class="get-started_hotkey">
-        <span class="get-started_hotkey-cmd">CMD</span>
-        <span class="get-started_hotkey-plus">+</span>
-        <span class="get-started_hotkey-p">P</span>
+      <div class="get-started_step-value">
+        <div class="get-started_hotkey">
+            <span class="get-started_hotkey-cmd">CMD</span>
+            <span class="get-started_hotkey-plus">+</span>
+            <span class="get-started_hotkey-p">P</span>
+        </div>
       </div>
     </div>
 
-    <div class="get-started_step">
+    <div class="get-started_step" style="--step-idx: 2">
       <div class="get-started_step-metas">
         <h3 class="typo-h3">
           <span class="get-started_step-number">3.</span> Import what you need
@@ -71,7 +75,9 @@ import './getStarted.css';
           project files.
         </p>
       </div>
-      <Code language="ts" header code="import {  } from '@blackbyte/sugar';" />
-    </div>
+      <div class="get-started_step-value">
+          <Code language="ts" header code="import {  } from '@blackbyte/sugar';" />
+      </div>
+      </div>
   </div>
 </section>

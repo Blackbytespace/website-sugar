@@ -46,6 +46,10 @@
     gap: s-space(10);
     align-items: center;
     @s-grid ('1 2');
+
+    @media sm {
+      @s-grid ('1 _ 2');
+    }
   }
 
   .get-started_step-metas {

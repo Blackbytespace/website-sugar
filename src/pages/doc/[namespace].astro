@@ -32,7 +32,7 @@ for (let [i, docObj] of allDoc.entries()) {
 ---
 
 <Layout pageTitle={DocItem.remarkPluginFrontmatter.title}>
-  <div class="doc">
+  <section class="doc">
     <div class="doc_nav">
       <Menu docmapJson={docmapJson} />
     </div>
@@ -41,5 +41,5 @@ for (let [i, docObj] of allDoc.entries()) {
         <DocItem.Content />
       </div>
     </div>
-  </div>
+  </section>
 </Layout>

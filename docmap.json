@@ -2321,8 +2321,8 @@
                     "description": "The processed string"
                 },
                 "setting": {
-                    "[regexp=\\[([a-zA-Z0-9-_]+)\\] The regexp to use to match the tokens": {
-                        "name": "[regexp=\\[([a-zA-Z0-9-_]+)\\] The regexp to use to match the tokens",
+                    "regexp": {
+                        "name": "regexp",
                         "type": {
                             "types": [
                                 {
@@ -2331,8 +2331,9 @@
                             ],
                             "raw": "String"
                         },
-                        "description": null,
-                        "defaultStr": ""
+                        "description": "The regexp to use to match the tokens",
+                        "default": "\\[([a-zA-Z0-9-_]+)\\",
+                        "defaultStr": "\\[([a-zA-Z0-9-_]+)\\"
                     },
                     "stripUndefined": {
                         "name": "stripUndefined",
@@ -30981,6 +30982,120 @@
                 "relPath": "src/js/is/isChrome.ts",
                 "children": {}
             },
+            "@blackbyte.sugar.js.dom.feature.sectionClasses": {
+                "id": "@blackbyte.sugar.js.dom.feature.sectionClasses",
+                "name": "sectionClasses",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "settings": {
+                        "name": "settings",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "TSectionClassesSettings"
+                                }
+                            ],
+                            "raw": "TSectionClassesSettings"
+                        },
+                        "description": "The settings you want to override",
+                        "default": {},
+                        "defaultStr": "{}"
+                    }
+                },
+                "setting": {
+                    "offset": {
+                        "name": "offset",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "number"
+                                }
+                            ],
+                            "raw": "number"
+                        },
+                        "description": "The offset you want before adding the classes",
+                        "default": 100,
+                        "defaultStr": "100"
+                    },
+                    "offsetX": {
+                        "name": "offsetX",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "number"
+                                }
+                            ],
+                            "raw": "number"
+                        },
+                        "description": "The offset x you want before adding the classes",
+                        "default": null,
+                        "defaultStr": "null"
+                    },
+                    "offsetY": {
+                        "name": "offsetY",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "number"
+                                }
+                            ],
+                            "raw": "number"
+                        },
+                        "description": "The offset y you want before adding the classes",
+                        "default": null,
+                        "defaultStr": "null"
+                    },
+                    "class": {
+                        "name": "class",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "string"
+                                }
+                            ],
+                            "raw": "string"
+                        },
+                        "description": "The class name you want. Will be used also in the %cls-x and %cls-y classes",
+                        "default": "scrolled",
+                        "defaultStr": "scrolled"
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, etc...\n1. `-in-viewport`: Added when the section is in the viewport\n2. `-near-viewport`: Added when the section is near the viewport (100px by default)",
+                "namespace": "@blackbyte.sugar.js.dom.feature",
+                "status": "stable",
+                "snippet": {
+                    "label": "sectionClasses($1);"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { sectionClasses } from '@blackbyte/sugar/features';\nsectionClasses({\n});"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "sectionClasses.ts",
+                "extension": "ts",
+                "relPath": "src/js/feature/sectionClasses.ts",
+                "children": {}
+            },
             "@blackbyte.sugar.js.dom.feature.scrollClasses": {
                 "id": "@blackbyte.sugar.js.dom.feature.scrollClasses",
                 "name": "scrollClasses",
@@ -34236,20 +34351,6 @@
                         "default": "document",
                         "defaultStr": "document"
                     },
-                    "once": {
-                        "name": "once",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "Boolean"
-                                }
-                            ],
-                            "raw": "Boolean"
-                        },
-                        "description": "If true, each observed nodes will be handled only once even if they are removed and reinjected in the dom",
-                        "default": true,
-                        "defaultStr": "true"
-                    },
                     "afterFirst": {
                         "name": "afterFirst",
                         "type": {
@@ -34262,20 +34363,6 @@
                         },
                         "description": "A function to call after the first node has been found",
                         "defaultStr": "undefined"
-                    },
-                    "scopes": {
-                        "name": "scopes",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "Boolean"
-                                }
-                            ],
-                            "raw": "Boolean"
-                        },
-                        "description": "If true, the selector",
-                        "default": true,
-                        "defaultStr": "true"
                     },
                     "firstOnly": {
                         "name": "firstOnly",
@@ -36800,9 +36887,9 @@
                             ],
                             "raw": "String"
                         },
-                        "description": "An offset to detect the in/out earlier or later",
-                        "default": "'10px'",
-                        "defaultStr": "'10px'"
+                        "description": "An offset to detect the enter/leave earlier or later",
+                        "default": 25,
+                        "defaultStr": "25"
                     },
                     "once": {
                         "name": "once",

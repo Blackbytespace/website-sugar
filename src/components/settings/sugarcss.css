@@ -29,5 +29,7 @@
   --s-shade-form-border: --alpha 0.2;
   --s-shade-form-border-focus: --alpha 0.5;
 
-  --s-shade-platform: --lightness 70;
+  --s-shade-text-complementary: --lightness 70;
+
+  --s-shade-platform: --lightness 80;
 }

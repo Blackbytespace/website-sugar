@@ -28,6 +28,10 @@
   gap: s-space(20);
   padding-block: s-space(40);
 
+  @media md {
+    padding-block: s-space(10);
+  }
+
   .get-started_header {
     opacity: 0;
   }

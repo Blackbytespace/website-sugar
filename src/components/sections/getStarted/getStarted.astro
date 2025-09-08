@@ -42,7 +42,7 @@ import './getStarted.css';
         </p>
       </div>
       <div class="get-started_step-value">
-          <Code language="bash" header code="npm install @blackbyte/sugar" />
+        <Code language="bash" header code="npm install @blackbyte/sugar" />
       </div>
     </div>
 
@@ -58,9 +58,9 @@ import './getStarted.css';
       </div>
       <div class="get-started_step-value">
         <div class="get-started_hotkey">
-            <span class="get-started_hotkey-cmd">CMD</span>
-            <span class="get-started_hotkey-plus">+</span>
-            <span class="get-started_hotkey-p">P</span>
+          <span class="get-started_hotkey-cmd">CMD</span>
+          <span class="get-started_hotkey-plus">+</span>
+          <span class="get-started_hotkey-p">P</span>
         </div>
       </div>
     </div>
@@ -76,8 +76,15 @@ import './getStarted.css';
         </p>
       </div>
       <div class="get-started_step-value">
-          <Code language="ts" header code="import {  } from '@blackbyte/sugar';" />
+        <Code
+          language="ts"
+          header
+          code={`import { querySelectorLive } from '@blackbyte/sugar/dom';
+import { pickRandom, unique } from '@blackbyte/sugar/array';
+import { sleep, timeAgo, formatDuration } from '@blackbyte/sugar/datetime';
+// etc... `}
+        />
       </div>
-      </div>
+    </div>
   </div>
 </section>

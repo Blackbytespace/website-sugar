@@ -1,7 +1,7 @@
 ---
 title: 'isDarkMode'
 namespace: '@blackbyte.sugar.js.is'
-description: 'Detect if the user prefer the dark mode. If you pass a &quot;rootNode&quot;, it will check by querying up the DOM if an element has the class `-dark` on it.'
+description: 'Detect if the user prefer the dark mode. Dark mode is detected using: - Match the media query `prefers-color-scheme: dark` - Check if an element has the class `-dark` on it or any of its parents (up to the document root)'
 type: 'Function'
 status: 'stable'
 since: '1.0.0'
@@ -19,8 +19,9 @@ author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"http
 <div class="docmap_namespace">@blackbyte.sugar.js.is</div>
 <div class="docmap_description typo-lead typo-format">
 Detect if the user prefer the dark mode.
-If you pass a &quot;rootNode&quot;, it will check by querying up the DOM if an element
-has the class `-dark` on it.
+Dark mode is detected using:
+- Match the media query `prefers-color-scheme: dark`
+- Check if an element has the class `-dark` on it or any of its parents (up to the document root)
 </div>
 <div class="docmap_return">
 ## Return
@@ -41,6 +42,19 @@ if ( isDarkMode()) {
 }
 ```
 </s-code>
+</div>
+<div class="docmap_settings">
+## Settings
+<ol class="docmap_list">
+<li class="docmap_item">
+<span class="docmap_name">ctx</span><span class="docmap_default">window</span> <span class="docmap_type">Window</span>
+<p class="docmap_description">The window context to use</p>
+</li>
+<li class="docmap_item">
+<span class="docmap_name">[rootNode]<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
+<p class="docmap_description">An optional root node to check for the `-dark` class</p>
+</li>
+</ol>
 </div>
 <div class="docmap_todo">
 ## Todo

@@ -46,7 +46,7 @@ Monitor when the passed element enter or exit the viewport
 ## Example
 <s-code language="js" header>
 ```js
-import { viewportEvents } from '@blackbyte/sugar/dom';
+import { viewportEvents } from '@blackbyte/sugar/dom';
 viewportEvents($1).addEventListener('viewport.enter', (e) => {
      // do something
 });
@@ -83,6 +83,15 @@ viewportEvents($1).addEventListener('viewport.enter', (e) => {
 <span class="docmap_email">olivier.bossel@gmail.com</span>
 <a href="https://blackbyte.space" target="_blank" class="docmap_url">https://blackbyte.space</a>
 </li>
+</ul>
+</div>
+<div class="docmap_changelog">
+## Changelog
+<ul class="docmap_changelog-list">
+<li class="docmap_changelog-item">
+          <div class="docmap_changelog-version">1.0.0</div>
+          <div class="docmap_changelog-description">Rename events from `viewport.in` / `viewport.out` to `viewport.enter` / `viewport.leave`</div>
+        </li>
 </ul>
 </div>
 </div>

@@ -10501,7 +10501,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isDomNode } from '@blackbyte/sugar/dom'\nisDomNode($myElement);"
+                        "code": "import { isDomNode } from '@blackbyte/sugar/is'\nisDomNode($myElement);"
                     }
                 ],
                 "since": "1.0.0",
@@ -10579,7 +10579,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isDomElement } from '@blackbyte/sugar/dom'\nisDomElement($myElement);"
+                        "code": "import { isDomElement } from '@blackbyte/sugar/is'\nisDomElement($myElement);"
                     }
                 ],
                 "since": "1.0.0",
@@ -29464,7 +29464,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isVisible } from '@blackbyte/sugar/dom'\nif (isVisible(myCoolHTMLElement) {\n\t\t// i'm visible\n}"
+                        "code": "import { isVisible } from '@blackbyte/sugar/is'\nif (isVisible(myCoolHTMLElement) {\n\t\t// i'm visible\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -29615,7 +29615,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isUserScrolling } from '@blackbyte/sugar/dom'\nif (isUserScrolling(myCoolHTMLElement) {\n\t\t// i'm in the viewport\n}"
+                        "code": "import { isUserScrolling } from '@blackbyte/sugar/is'\nif (isUserScrolling(myCoolHTMLElement) {\n\t\t// i'm in the viewport\n}"
                     }
                 ],
                 "async": true,
@@ -29802,7 +29802,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isScrollable } from '@blackbyte/sugar/dom'\nif (isScrollable($myElement)) {\n  // do something\n}"
+                        "code": "import { isScrollable } from '@blackbyte/sugar/is'\nif (isScrollable($myElement)) {\n  // do something\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -30132,7 +30132,7 @@
                         "description": ""
                     }
                 ],
-                "description": "Detect if is a mobile device (phone or tablet)",
+                "description": "Detect if is a mobile device (phone or tablet)\nHere&#39;s the checklist we use:\n- has touch events\n- has orientation\n- max width 639px (to be improved)\n- pointer is coarse",
                 "namespace": "@blackbyte.sugar.js.is",
                 "status": "stable",
                 "snippet": {
@@ -30237,7 +30237,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isInViewport } from '@blackbyte/sugar/dom'\nif (isInViewport(myCoolHTMLElement) {\n\t\t// i'm in the viewport\n}"
+                        "code": "import { isInViewport } from '@blackbyte/sugar/is'\nif (isInViewport(myCoolHTMLElement) {\n\t\t// i'm in the viewport\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -30294,7 +30294,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isInIframe } from '@blackbyte/sugar/dom'\nif (isInIframe()) {\n  // do something\n}"
+                        "code": "import { isInIframe } from '@blackbyte/sugar/is'\nif (isInIframe()) {\n  // do something\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -30428,7 +30428,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isHover } from '@blackbyte/sugar/dom'\nconst $myElm = document.querySelector('.my-elm')\nif (isHover($myElm)) {\n  // do something\n}"
+                        "code": "import { isHover } from '@blackbyte/sugar/is'\nconst $myElm = document.querySelector('.my-elm')\nif (isHover($myElm)) {\n  // do something\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -30546,7 +30546,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isFocusWithin } from '@blackbyte/sugar/dom'\nconst $myElm = document.querySelector('.my-elm')\nif (isFocusWithin($myElm)) {\n  // do something\n}"
+                        "code": "import { isFocusWithin } from '@blackbyte/sugar/is'\nconst $myElm = document.querySelector('.my-elm')\nif (isFocusWithin($myElm)) {\n  // do something\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -30607,7 +30607,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isFocus } from '@blackbyte/sugar/dom'\nconst $myElm = document.querySelector('.my-elm')\nif (isFocus($myElm)) {\n  // do something\n}"
+                        "code": "import { isFocus } from '@blackbyte/sugar/is'\nconst $myElm = document.querySelector('.my-elm')\nif (isFocus($myElm)) {\n  // do something\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -30795,13 +30795,42 @@
                     },
                     "description": "true if prefer dark mode, false if not"
                 },
+                "setting": {
+                    "ctx": {
+                        "name": "ctx",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Window"
+                                }
+                            ],
+                            "raw": "Window"
+                        },
+                        "description": "The window context to use",
+                        "default": "window",
+                        "defaultStr": "window"
+                    },
+                    "[rootNode]": {
+                        "name": "[rootNode]",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLElement"
+                                }
+                            ],
+                            "raw": "HTMLElement"
+                        },
+                        "description": "An optional root node to check for the `-dark` class",
+                        "defaultStr": ""
+                    }
+                },
                 "platform": [
                     {
                         "name": "js",
                         "description": ""
                     }
                 ],
-                "description": "Detect if the user prefer the dark mode.\nIf you pass a &quot;rootNode&quot;, it will check by querying up the DOM if an element\nhas the class `-dark` on it.",
+                "description": "Detect if the user prefer the dark mode.\nDark mode is detected using:\n- Match the media query `prefers-color-scheme: dark`\n- Check if an element has the class `-dark` on it or any of its parents (up to the document root)",
                 "namespace": "@blackbyte.sugar.js.is",
                 "status": "stable",
                 "snippet": {
@@ -36922,7 +36951,13 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { viewportEvents } from '@blackbyte/sugar/dom';\nviewportEvents($1).addEventListener('viewport.enter', (e) => {\n     // do something\n});"
+                        "code": "import { viewportEvents } from '@blackbyte/sugar/dom';\nviewportEvents($1).addEventListener('viewport.enter', (e) => {\n     // do something\n});"
+                    }
+                ],
+                "changelog": [
+                    {
+                        "version": "1.0.0",
+                        "description": "Rename events from `viewport.in` / `viewport.out` to `viewport.enter` / `viewport.leave`"
                     }
                 ],
                 "async": true,
@@ -37233,7 +37268,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { stylesheetToString } from '@blackbyte/sugar/dom';\nstylesheetToString(document.stylesheets); // => body { ... }"
+                        "code": "import { stylesheetToString } from '@blackbyte/sugar/css';\nstylesheetToString(document.stylesheets); // => body { ... }"
                     }
                 ],
                 "since": "1.0.0",
@@ -37431,7 +37466,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { adoptStyleInShadowRoot } from '@blackbyte/sugar/dom';\nconst myShadowRoot = $myElement.shadowRoot;\nawait adoptStyleInShadowRoot(myShadowRoot);"
+                        "code": "import { adoptStyleInShadowRoot } from '@blackbyte/sugar/css';\nconst myShadowRoot = $myElement.shadowRoot;\nawait adoptStyleInShadowRoot(myShadowRoot);"
                     }
                 ],
                 "since": "1.0.0",

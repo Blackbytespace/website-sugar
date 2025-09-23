@@ -6,7 +6,7 @@ export default {
     projectApiKey: 'phc_t5yvxkWJDtICl40OBt4QfJmYgsT8CHfC44uNSOmyar3',
   },
   title: 'Sugar',
-  description: 'High quality toolkit for web development',
+  description: 'The toolkit that you missed... like a sugar in your coffee!',
   install: 'npm i @blackbyte/sugar',
   getStarted: {
     url: '/#get-started',
@@ -26,7 +26,8 @@ export default {
     url: 'https://github.com/Blackbytespace/sugar',
   },
   og: {
-    imageUrl: 'https://cdn.blackbyte.space/img/blackbyte-sugar-og.png',
+    imageUrl:
+      'https://raw.githubusercontent.com/Blackbytespace/sugar/refs/heads/main/assets/blackbyte-sugar-og.png',
   },
   menu: [
     {

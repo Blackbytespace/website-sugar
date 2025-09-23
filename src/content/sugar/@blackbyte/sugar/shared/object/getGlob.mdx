@@ -30,8 +30,8 @@ all values with the path that matches the passed glob pattern.
 <p class="docmap_description">The object in which to set the value</p>
 </li>
 <li class="docmap_item">
-<span class="docmap_name">path<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">String</span>
-<p class="docmap_description">The dotted object path to get</p>
+<span class="docmap_name">glob<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">String</span>
+<p class="docmap_description">A glob to describe what you want into the object</p>
 </li>
 <li class="docmap_item">
 <span class="docmap_name">settings</span><span class="docmap_default">&lcub;&rcub;</span> <span class="docmap_type">Object</span>
@@ -65,8 +65,8 @@ getGlob({
 ## Settings
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">deepize</span><span class="docmap_default">true</span> <span class="docmap_type">Boolean</span>
-<p class="docmap_description">Specify if you want the result object to be deepized using the ```deepize``` sugar function</p>
+<span class="docmap_name">unflatten</span><span class="docmap_default">true</span> <span class="docmap_type">Boolean</span>
+<p class="docmap_description">Specify if you want the result object to be unflattend using the ```unflatten``` sugar function</p>
 </li>
 </ol>
 </div>

@@ -1,6 +1,10 @@
 import type { TWebsiteConfig } from '@blackbyte/website-common';
+import packageJson from './package.json' assert { type: 'json' };
 
 export default {
+  posthog: {
+    projectApiKey: 'phc_t5yvxkWJDtICl40OBt4QfJmYgsT8CHfC44uNSOmyar3',
+  },
   title: 'Sugar',
   description: 'High quality toolkit for web development',
   install: 'npm i @blackbyte/sugar',
@@ -12,9 +16,10 @@ export default {
     description:
       'The toolkit that you missed...<br />...like <span class="color-accent">a sugar in your coffee!</span>',
   },
+  version: packageJson.version,
   license: {
     name: 'MIT',
-    url: 'https://github.com/blackbytespace/monorepo/blob/main/packages/sugar/LICENSE.md',
+    url: 'https://github.com/Blackbytespace/sugar/blob/main/LICENSE.md',
   },
   repository: {
     name: 'Blackbyte Sugar',
@@ -57,7 +62,7 @@ export default {
           label: 'License',
           description: 'View the license information',
           value: 'license',
-          url: 'https://github.com/Blackbytespace/monorepo/blob/main/LICENSE.md',
+          url: 'https://github.com/Blackbytespace/sugar/blob/main/LICENSE.md',
           preventSet: true,
         },
       ],

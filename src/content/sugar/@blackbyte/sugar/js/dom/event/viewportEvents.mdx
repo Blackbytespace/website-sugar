@@ -47,8 +47,12 @@ Monitor when the passed element enter or exit the viewport
 <s-code language="js" header>
 ```js
 import { viewportEvents } from '@blackbyte/sugar/dom';
-viewportEvents($1).addEventListener('viewport.enter', (e) => {
-     // do something
+viewportEvents($elm);
+$elm.addEventListener('viewport.enter', (e) => {
+     // do something on enter
+});
+$elm.addEventListener('viewport.leave', (e) => {
+     // do something on leave
 });
 ```
 </s-code>

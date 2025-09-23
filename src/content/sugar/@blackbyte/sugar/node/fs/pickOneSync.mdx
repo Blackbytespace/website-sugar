@@ -37,8 +37,8 @@ This function allows you to specify multiple files to check and pick one of them
 ## Return
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_default">-</span><span class="docmap_type">SFile&vert;String</span>
-<p class="docmap_description">Either an SFile instance if set in the config&comma; or the path of the file found</p>
+<span class="docmap_default">-</span><span class="docmap_type">String</span>
+<p class="docmap_description">The path of the file found</p>
 </li>
 </ol>
 </div>
@@ -57,10 +57,6 @@ pickOneSync(['myCoolFile.json', 'myCoolFile2.json'], {});
 <li class="docmap_item">
 <span class="docmap_name">cwd</span><span class="docmap_default">process&period;cwd&lpar;&rpar;</span> <span class="docmap_type">String</span>
 <p class="docmap_description">The current working directory to search in</p>
-</li>
-<li class="docmap_item">
-<span class="docmap_name">SFile</span><span class="docmap_default">true</span> <span class="docmap_type">Boolean</span>
-<p class="docmap_description">Return an SFile instance if true, otherwise just a simple path string</p>
 </li>
 </ol>
 </div>

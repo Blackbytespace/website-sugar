@@ -208,11 +208,11 @@ convertColor('#ff0000', 'hex') // #ff0000
         'A set of utility functions to manipulate time in a more efficient way.',
       language: 'typescript',
       code: `import {
-  convertTime,¨¨
-  formatDuration,
+  convertTime,
   sleep,
-  timeAgo
-} from '@blackbyte/sugar/array'
+  timeAgo,
+  formatDuration
+} from '@blackbyte/sugar/datetime'
 
 // convert time from one format to another
 convertTime('10s', 'ms') // => 10000
@@ -238,14 +238,8 @@ timeAgo(1704067200000) // => "9 months ago"
 };
 ---
 
-<Layout pageTitle="Sugar">
-  <Welcome
-    title={websiteConfig.welcome.title}
-    description={websiteConfig.welcome.description}
-    getStarted={websiteConfig.getStarted}
-    repository={websiteConfig.repository}
-    install={websiteConfig.install}
-  />
+<Layout pageTitle="Welcome">
+  <Welcome websiteConfig={websiteConfig} />
   <CodeSamples samples={samples.samples} />
   <GetStarted />
 </Layout>

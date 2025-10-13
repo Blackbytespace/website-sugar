@@ -24,7 +24,7 @@ Detect swipes gestures on touch devices.
 ## Params
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
+<span class="docmap_name">$elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
 <p class="docmap_description">The HTMLElement on which to detect the swipe</p>
 </li>
 <li class="docmap_item">
@@ -42,15 +42,15 @@ Detect swipes gestures on touch devices.
 <s-code language="js" header>
 ```js
 import { onSwipe } from '@blackbyte/sugar/dom'
-onSwipe(myCoolElm, (swipe) => {
-	// check the swipe direction
-	if (swipe.left) {
-		// do something...
-	}
-	// support : left, right, up, down
-	// etc...
+onSwipe($elm, (swipe) => {
+  // check the swipe direction
+  if (swipe.left) {
+    // do something...
+	 }
+	 // support : left, right, up, down
+	 // etc...
 }, {
-	threshold : 50
+  threshold : 50
 });
 ```
 </s-code>

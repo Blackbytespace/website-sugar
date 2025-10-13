@@ -24,7 +24,7 @@ Get the offset top and left of the passed element from his parent top left point
 ## Params
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
+<span class="docmap_name">$elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
 <p class="docmap_description">The element to get the offset from</p>
 </li>
 </ol>
@@ -43,7 +43,7 @@ Get the offset top and left of the passed element from his parent top left point
 <s-code language="js" header>
 ```js
 import { offsetFromParent } from '@blackbyte/sugar/dom'
-const offsetFromParentElm = offsetFromParent(myCoolElement);
+const offsetFromParentElm = offsetFromParent($elm);
 // output : { top : 200, left : 300 }
 ```
 </s-code>

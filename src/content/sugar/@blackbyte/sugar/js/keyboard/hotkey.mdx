@@ -1,7 +1,7 @@
 ---
 title: 'hotkey'
 namespace: '@blackbyte.sugar.js.keyboard'
-description: 'This function allows you to register a hotkey on the passed element. You can specify the hotkey using the following syntax: - ctrl+a - shift+ctrl+a - a This function take care of avoiding to call your callback when the active element is an input, a textarea or an editable content with the &quot;contenteditable&quot; attribute, unless: - the &quot;meta&quot; or &quot;ctrl&quot; key is used in the hotkey. - the pressed key is the &quot;escape&quot; key.'
+description: 'This function allows you to register a hotkey on the passed element. You can specify the hotkey using the following syntax: - `ctrl+a` - `shift+ctrl+a` - `a` This function take care of avoiding to call your callback when the active element is an input, a textarea or an editable content with the &quot;contenteditable&quot; attribute, unless: - the &quot;meta&quot; or &quot;ctrl&quot; key is used in the hotkey. - the pressed key is the &quot;escape&quot; key.'
 type: 'Function'
 status: 'stable'
 since: '1.0.0'
@@ -20,9 +20,9 @@ author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"http
 <div class="docmap_description typo-lead typo-format">
 This function allows you to register a hotkey on the passed element.
 You can specify the hotkey using the following syntax:
-- ctrl+a
-- shift+ctrl+a
-- a
+- `ctrl+a`
+- `shift+ctrl+a`
+- `a`
 This function take care of avoiding to call your callback when the active element
 is an input, a textarea or an editable content with the &quot;contenteditable&quot; attribute,
 unless:
@@ -61,7 +61,7 @@ unless:
 ```js
 import { hotkey } from '@blackbyte/sugar/keyboard'
 const hotkeyApi = hotkey('ctrl+a', (e) => {
- console.log('Hotkey pressed');
+  console.log('Hotkey pressed');
 });
 
 // if you want to cancel the hotkey

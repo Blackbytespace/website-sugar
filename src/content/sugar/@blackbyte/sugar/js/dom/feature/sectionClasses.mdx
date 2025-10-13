@@ -1,7 +1,7 @@
 ---
 title: 'sectionClasses'
 namespace: '@blackbyte.sugar.js.dom.feature'
-description: 'This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, etc... 1. `-in-viewport`: Added when the section is in the viewport 2. `-near-viewport`: Added when the section is near the viewport (100px by default)'
+description: 'This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, etc... 1. `-in-viewport`: Added when the section is in the viewport'
 type: 'Function'
 status: 'stable'
 since: '1.0.0'
@@ -20,7 +20,6 @@ author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"http
 <div class="docmap_description typo-lead typo-format">
 This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, etc...
 1. `-in-viewport`: Added when the section is in the viewport
-2. `-near-viewport`: Added when the section is near the viewport (100px by default)
 </div>
 <div class="docmap_params">
 ## Params
@@ -36,8 +35,7 @@ This feature allows you to add some classes on your sections when they are in th
 <s-code language="js" header>
 ```js
 import { sectionClasses } from '@blackbyte/sugar/features';
-sectionClasses({
-});
+sectionClasses();
 ```
 </s-code>
 </div>
@@ -45,20 +43,12 @@ sectionClasses({
 ## Settings
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">offset</span><span class="docmap_default">100</span> <span class="docmap_type">number</span>
-<p class="docmap_description">The offset you want before adding the classes</p>
+<span class="docmap_name">inClass</span><span class="docmap_default">&apos;-in-viewport&apos;</span> <span class="docmap_type">String</span>
+<p class="docmap_description">The class to add when the section is in the viewport</p>
 </li>
 <li class="docmap_item">
-<span class="docmap_name">offsetX</span><span class="docmap_default">-</span> <span class="docmap_type">number</span>
-<p class="docmap_description">The offset x you want before adding the classes</p>
-</li>
-<li class="docmap_item">
-<span class="docmap_name">offsetY</span><span class="docmap_default">-</span> <span class="docmap_type">number</span>
-<p class="docmap_description">The offset y you want before adding the classes</p>
-</li>
-<li class="docmap_item">
-<span class="docmap_name">class</span><span class="docmap_default">scrolled</span> <span class="docmap_type">string</span>
-<p class="docmap_description">The class name you want. Will be used also in the %cls-x and %cls-y classes</p>
+<span class="docmap_name">offset</span><span class="docmap_default">25</span> <span class="docmap_type">Number</span>
+<p class="docmap_description">The offset in px to consider the section is in the viewport</p>
 </li>
 </ol>
 </div>

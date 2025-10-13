@@ -53,11 +53,20 @@ the direction you want to search the nearest element.
 <s-code language="js" header>
 ```js
 import { nearestElement } from '@blackbyte/sugar/dom'
-nearestElement(myCoolElement, document.querySelectorAll('.my-cool-elements'), {
-     direction: 'top'
+nearestElement($elm, document.querySelectorAll('.my-cool-elements'), {
+  direction: 'top'
 });
 ```
 </s-code>
+</div>
+<div class="docmap_settings">
+## Settings
+<ol class="docmap_list">
+<li class="docmap_item">
+<span class="docmap_name">[direction]<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">&apos;top&apos; &vert; &apos;right&apos; &vert; &apos;bottom&apos; &vert; &apos;left&apos;</span>
+<p class="docmap_description">The direction to search in. Can be "top", "right", "bottom", "left"</p>
+</li>
+</ol>
 </div>
 <div class="docmap_todo">
 ## Todo

@@ -1,7 +1,7 @@
 ---
 title: 'scrollProperties'
 namespace: '@blackbyte.sugar.js.dom.feature'
-description: 'This feature allows you to automatically apply css properties on the body element depending on the scroll position. The properties that are applied are: - `--scroll-x`: The current scroll x position - `--scroll-y`: The current scroll y position'
+description: 'This feature allows you to automatically apply css properties on the element passed in settings depending on the scroll position. The properties that are applied are: - `--scroll-x`: The current scroll x position - `--scroll-y`: The current scroll y position'
 type: 'Function'
 status: 'stable'
 since: '1.0.0'
@@ -18,7 +18,7 @@ author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"http
 </div>
 <div class="docmap_namespace">@blackbyte.sugar.js.dom.feature</div>
 <div class="docmap_description typo-lead typo-format">
-This feature allows you to automatically apply css properties on the body element depending on the scroll position.
+This feature allows you to automatically apply css properties on the element passed in settings depending on the scroll position.
 The properties that are applied are:
 - `--scroll-x`: The current scroll x position
 - `--scroll-y`: The current scroll y position
@@ -40,6 +40,15 @@ import { scrollProperties } from '@blackbyte/sugar/features';
 scrollProperties();
 ```
 </s-code>
+</div>
+<div class="docmap_settings">
+## Settings
+<ol class="docmap_list">
+<li class="docmap_item">
+<span class="docmap_name">$elm</span><span class="docmap_default">document&period;body</span> <span class="docmap_type">HTMLElement</span>
+<p class="docmap_description">The element on which to apply the css properties</p>
+</li>
+</ol>
 </div>
 <div class="docmap_author">
 ## Author

@@ -54,9 +54,9 @@ when you don&#39;t have the chance to use the custom elements API instead
 ```js
 import { querySelectorLive } from '@blackbyte/sugar/dom'
 const query = querySelectorLive('.my-cool-item', (node, api) => {
-	    // do something here with the detected node
-     // call api.cancel if you want to stop listening for this selector
-     api.cancel();
+  // do something here with the detected node
+  // call api.cancel if you want to stop listening for this selector
+  api.cancel();
 });
 // cancel the query manually when needed
 query.cancel();
@@ -67,7 +67,7 @@ query.cancel();
 ## Settings
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">rootNode</span><span class="docmap_default">document</span> <span class="docmap_type">HTMLElement</span>
+<span class="docmap_name">$rootNode</span><span class="docmap_default">document</span> <span class="docmap_type">HTMLElement</span>
 <p class="docmap_description">The root node from where to observe childs</p>
 </li>
 <li class="docmap_item">

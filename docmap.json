@@ -16180,6 +16180,234 @@
                 "relPath": "src/shared/datetime/convertTime.ts",
                 "children": {}
             },
+            "@blackbyte.sugar.shared.currency.currencySymbolToCode": {
+                "id": "@blackbyte.sugar.shared.currency.currencySymbolToCode",
+                "name": "currencySymbolToCode",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "symbol": {
+                        "name": "symbol",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The currency symbol to get the code from",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "String"
+                            }
+                        ],
+                        "raw": "String"
+                    },
+                    "description": "The currency code"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function return the currency code like &quot;USD&quot; from a symbol like &quot;$&quot;",
+                "namespace": "@blackbyte.sugar.shared.currency",
+                "status": "stable",
+                "snippet": {
+                    "label": "currencySymbolToCode($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { currencySymbolToCode } from '@blackbyte/sugar/currency';\ncurrencySymbolToCode('$'); // => USD"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://www.npmjs.com/package/currency-symbol-map",
+                        "description": ""
+                    }
+                ],
+                "filename": "currencySymbolToCode.ts",
+                "extension": "ts",
+                "relPath": "src/shared/currency/currencySymbolToCode.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.shared.currency.currencyStringToObject": {
+                "id": "@blackbyte.sugar.shared.currency.currencyStringToObject",
+                "name": "currencyStringToObject",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "currency": {
+                        "name": "currency",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The currency string to convert",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "TCurrencyToObject"
+                            }
+                        ],
+                        "raw": "TCurrencyToObject"
+                    },
+                    "description": "The currency object"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function take a currency string like &quot;120 USD&quot; and convert it to an object\ncontaining these properties:\n\n- `amount`: 120,\n- `code`: USD,\n- `symbol`: $",
+                "namespace": "@blackbyte.sugar.shared.currency",
+                "status": "stable",
+                "snippet": {
+                    "label": "currencyStringToObject($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { currencyStringToObject } from '@blackbyte/sugar/currency';\ncurrencyStringToObject('120 $');\n{\n  amount: 120,\n  code: 'USD',\n  symbol: '$'\n}"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://www.npmjs.com/package/currency-symbol-map",
+                        "description": ""
+                    }
+                ],
+                "filename": "currencyStringToObject.ts",
+                "extension": "ts",
+                "relPath": "src/shared/currency/currencyStringToObject.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.shared.currency.currencyCodeToSymbol": {
+                "id": "@blackbyte.sugar.shared.currency.currencyCodeToSymbol",
+                "name": "currencyCodeToSymbol",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "code": {
+                        "name": "code",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The currency code to get the symbol from",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "String"
+                            }
+                        ],
+                        "raw": "String"
+                    },
+                    "description": "The currency symbol"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function return the currency symbol like &quot;$&quot; from a code like &quot;USD&quot;",
+                "namespace": "@blackbyte.sugar.shared.currency",
+                "status": "stable",
+                "snippet": {
+                    "label": "currencyCodeToSymbol($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { currencyCodeToSymbol } from '@blackbyte/sugar/currency';\ncurrencyCodeToSymbol('USD'); // => $"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://www.npmjs.com/package/currency-symbol-map",
+                        "description": ""
+                    }
+                ],
+                "filename": "currencyCodeToSymbol.ts",
+                "extension": "ts",
+                "relPath": "src/shared/currency/currencyCodeToSymbol.ts",
+                "children": {}
+            },
             "@blackbyte.sugar.shared.css.stripCssComments": {
                 "id": "@blackbyte.sugar.shared.css.stripCssComments",
                 "name": "stripCssComments",
@@ -16438,7 +16666,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { styleStringToObject } from '@blackbyte/sugar/css'\nconst styleString =  styleStringToObject('padding-left:20px; display:block;');\n// output => {\n//\t\tpaddingLeft : '20px',\n// \t\tdisplay : 'block'\n// }"
+                        "code": "import { styleStringToObject } from '@blackbyte/sugar/css'\nconst styleString =  styleStringToObject('padding-left:20px; display:block;');\n// output => {\n//\t    paddingLeft : '20px',\n//     display : 'block'\n// }"
                     }
                 ],
                 "since": "1.0.0",
@@ -16517,7 +16745,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { styleObjectToString } from '@blackbyte/sugar/css'\nconst styleString =  styleObjectToString({\n\t\tpaddingLeft : '20px',\n\t\tdisplay : 'block'\n});\n// output => padding-left:20px; display:block;"
+                        "code": "import { styleObjectToString } from '@blackbyte/sugar/css'\nconst styleString =  styleObjectToString({\n  paddingLeft : '20px',\n  display : 'block'\n});\n// output => padding-left:20px; display:block;"
                     }
                 ],
                 "since": "1.0.0",
@@ -17936,7 +18164,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { __hslToRgba } from '@blackbyte/sugar/color';\n__hslToRgba(10,20,30);"
+                        "code": "import { hslToRgba } from '@blackbyte/sugar/color';\nhslToRgba(10,20,30);"
                     }
                 ],
                 "since": "1.0.0",
@@ -18955,6 +19183,12 @@
                     {
                         "language": "js",
                         "code": "import { unique } from '@blackbyte/sugar/array';\nunique(['hello','world','hello','world']); // => ['hello','world']"
+                    }
+                ],
+                "changelog": [
+                    {
+                        "version": "1.0.0-beta.2",
+                        "description": "Add the \"stringify\" option to compare objects in string format"
                     }
                 ],
                 "since": "1.0.0",
@@ -25438,7 +25672,7 @@
                         "description": ""
                     }
                 ],
-                "description": "This function allows you to set a theme for your website/application.\nIt will set the theme on the `body` tag like `theme-...` and set a cookie to remember the theme.\nYou will be able to get the theme from your backend code (PHP) using the `\\Sugar\\Theme\\getTheme()` function\nto set it in your body class attribute.",
+                "description": "This function allows you to set a theme for your website/application.\nIt will set the theme on the `body` tag like `theme-...` and set a cookie to remember the theme.",
                 "namespace": "@blackbyte.sugar.js.theme",
                 "status": "stable",
                 "snippet": {
@@ -25538,7 +25772,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { setTheme } from '@blackbyte/sugar/theme';\nsetTheme('dark');"
+                        "code": "import { restoreTheme } from '@blackbyte/sugar/theme';\nrestoreTheme('dark');"
                     }
                 ],
                 "since": "1.0.0",
@@ -25905,14 +26139,14 @@
                 ],
                 "description": "Function that let you make a smooth page scroll to a specific element in the page",
                 "namespace": "@blackbyte.sugar.js.dom.scroll",
-                "status": "beta",
+                "status": "stable",
                 "snippet": {
                     "label": "__scrollTo($1)"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { __scrollTop } from '@coffeekraken/sugar/dom'\nimport { easeInOutQuad } from '@coffeekraken/sugar/easing'\n__scrollTo(myCoolHTMLElement);"
+                        "code": "import { scrollTo } from '@coffeekraken/sugar/dom'\nimport { easeInOutQuad } from '@coffeekraken/sugar/easing'\nscrollTo(myCoolHTMLElement);"
                     }
                 ],
                 "async": true,
@@ -26133,7 +26367,7 @@
                         "description": ""
                     }
                 ],
-                "description": "This function allows you to register a hotkey on the passed element.\nYou can specify the hotkey using the following syntax:\n- ctrl+a\n- shift+ctrl+a\n- a\nThis function take care of avoiding to call your callback when the active element\nis an input, a textarea or an editable content with the &quot;contenteditable&quot; attribute,\nunless:\n- the &quot;meta&quot; or &quot;ctrl&quot; key is used in the hotkey.\n- the pressed key is the &quot;escape&quot; key.",
+                "description": "This function allows you to register a hotkey on the passed element.\nYou can specify the hotkey using the following syntax:\n- `ctrl+a`\n- `shift+ctrl+a`\n- `a`\nThis function take care of avoiding to call your callback when the active element\nis an input, a textarea or an editable content with the &quot;contenteditable&quot; attribute,\nunless:\n- the &quot;meta&quot; or &quot;ctrl&quot; key is used in the hotkey.\n- the pressed key is the &quot;escape&quot; key.",
                 "namespace": "@blackbyte.sugar.js.keyboard",
                 "status": "stable",
                 "snippet": {
@@ -26143,7 +26377,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { hotkey } from '@blackbyte/sugar/keyboard'\nconst hotkeyApi = hotkey('ctrl+a', (e) => {\n console.log('Hotkey pressed');\n});\n\n// if you want to cancel the hotkey\nhotkeyApi.cancel();"
+                        "code": "import { hotkey } from '@blackbyte/sugar/keyboard'\nconst hotkeyApi = hotkey('ctrl+a', (e) => {\n  console.log('Hotkey pressed');\n});\n\n// if you want to cancel the hotkey\nhotkeyApi.cancel();"
                     }
                 ],
                 "since": "1.0.0",
@@ -26333,7 +26567,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isVisible } from '@blackbyte/sugar/is'\nif (isVisible(myCoolHTMLElement) {\n\t\t// i'm visible\n}"
+                        "code": "import { isVisible } from '@blackbyte/sugar/is'\nif (isVisible(myCoolHTMLElement) {\n  // i'm visible\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -26484,7 +26718,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isUserScrolling } from '@blackbyte/sugar/is'\nif (isUserScrolling(myCoolHTMLElement) {\n\t\t// i'm in the viewport\n}"
+                        "code": "import { isUserScrolling } from '@blackbyte/sugar/is'\nif (isUserScrolling(myCoolHTMLElement) {\n  // i'm in the viewport\n}"
                     }
                 ],
                 "async": true,
@@ -27118,7 +27352,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isInViewport } from '@blackbyte/sugar/is'\nif (isInViewport(myCoolHTMLElement) {\n\t\t// i'm in the viewport\n}"
+                        "code": "import { isInViewport } from '@blackbyte/sugar/is'\nif (isInViewport(myCoolHTMLElement) {\n  // i'm in the viewport\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -27953,61 +28187,33 @@
                     }
                 },
                 "setting": {
+                    "inClass": {
+                        "name": "inClass",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The class to add when the section is in the viewport",
+                        "default": "'-in-viewport'",
+                        "defaultStr": "'-in-viewport'"
+                    },
                     "offset": {
                         "name": "offset",
                         "type": {
                             "types": [
                                 {
-                                    "type": "number"
+                                    "type": "Number"
                                 }
                             ],
-                            "raw": "number"
+                            "raw": "Number"
                         },
-                        "description": "The offset you want before adding the classes",
-                        "default": 100,
-                        "defaultStr": "100"
-                    },
-                    "offsetX": {
-                        "name": "offsetX",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "number"
-                                }
-                            ],
-                            "raw": "number"
-                        },
-                        "description": "The offset x you want before adding the classes",
-                        "default": null,
-                        "defaultStr": "null"
-                    },
-                    "offsetY": {
-                        "name": "offsetY",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "number"
-                                }
-                            ],
-                            "raw": "number"
-                        },
-                        "description": "The offset y you want before adding the classes",
-                        "default": null,
-                        "defaultStr": "null"
-                    },
-                    "class": {
-                        "name": "class",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "string"
-                                }
-                            ],
-                            "raw": "string"
-                        },
-                        "description": "The class name you want. Will be used also in the %cls-x and %cls-y classes",
-                        "default": "scrolled",
-                        "defaultStr": "scrolled"
+                        "description": "The offset in px to consider the section is in the viewport",
+                        "default": 25,
+                        "defaultStr": "25"
                     }
                 },
                 "platform": [
@@ -28016,7 +28222,7 @@
                         "description": ""
                     }
                 ],
-                "description": "This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, etc...\n1. `-in-viewport`: Added when the section is in the viewport\n2. `-near-viewport`: Added when the section is near the viewport (100px by default)",
+                "description": "This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, etc...\n1. `-in-viewport`: Added when the section is in the viewport",
                 "namespace": "@blackbyte.sugar.js.dom.feature",
                 "status": "stable",
                 "snippet": {
@@ -28025,7 +28231,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { sectionClasses } from '@blackbyte/sugar/features';\nsectionClasses({\n});"
+                        "code": "import { sectionClasses } from '@blackbyte/sugar/features';\nsectionClasses();"
                     }
                 ],
                 "since": "1.0.0",
@@ -28066,13 +28272,29 @@
                         "defaultStr": "{}"
                     }
                 },
+                "setting": {
+                    "$elm": {
+                        "name": "$elm",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLElement"
+                                }
+                            ],
+                            "raw": "HTMLElement"
+                        },
+                        "description": "The element on which to apply the css properties",
+                        "default": "document.body",
+                        "defaultStr": "document.body"
+                    }
+                },
                 "platform": [
                     {
                         "name": "js",
                         "description": ""
                     }
                 ],
-                "description": "This feature allows you to automatically apply css properties on the body element depending on the scroll position.\nThe properties that are applied are:\n- `--scroll-x`: The current scroll x position\n- `--scroll-y`: The current scroll y position",
+                "description": "This feature allows you to automatically apply css properties on the element passed in settings depending on the scroll position.\nThe properties that are applied are:\n- `--scroll-x`: The current scroll x position\n- `--scroll-y`: The current scroll y position",
                 "namespace": "@blackbyte.sugar.js.dom.feature",
                 "status": "stable",
                 "snippet": {
@@ -28262,7 +28484,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenVisible } from '@blackbyte/sugar/dom'\nwhenVisible(myCoolHTMLElement).then(($elm) => {\n\t\t// do something with your element that is now visible\n});"
+                        "code": "import { whenVisible } from '@blackbyte/sugar/dom'\nwhenVisible(myCoolHTMLElement).then(($elm) => {\n  // do something with your element that is now visible\n});"
                     }
                 ],
                 "async": true,
@@ -28295,8 +28517,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -28369,8 +28591,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "links": {
-                        "name": "links",
+                    "$links": {
+                        "name": "$links",
                         "type": {
                             "types": [
                                 {
@@ -28417,7 +28639,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenStylesheetsReady } from '@blackbyte/sugar/dom'\nwhenStylesheetsReady([\n\t\tmyHTMLLinkElement1,\n\t\tmyHTMLLinkElement2\n]).then(stylesheets => {\n     // do something...\n});"
+                        "code": "import { whenStylesheetsReady } from '@blackbyte/sugar/dom'\nwhenStylesheetsReady([\n\t\t$myHTMLLinkElement1,\n\t\t$myHTMLLinkElement2\n]).then(stylesheets => {\n     // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -28573,12 +28795,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenRemoved($1);",
-                    "code": "whenRemoved($1).then(() => {\n     $2\n});"
+                    "code": "whenRemoved($1).then(() => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenRemoved } from '@blackbyte/sugar/dom'\nwhenRemoved(myCoolHTMLElement).then(() => {\n\t\t// the element has been removed\n});"
+                        "code": "import { whenRemoved } from '@blackbyte/sugar/dom'\nwhenRemoved($myCoolHTMLElement).then(() => {\n  // the element has been removed\n});"
                     }
                 ],
                 "async": true,
@@ -28680,12 +28902,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenOutOfViewport($1)",
-                    "code": "whenOutOfViewport($1).then(\\$$elm => {\n     $2\n});"
+                    "code": "whenOutOfViewport($1).then(\\$$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenOutOfViewport } from '@blackbyte/sugar/dom'\nwhenOutOfViewport(myCoolHTMLElement).then(($elm) => {\n\t\t// do something with your element that has exit the viewport...\n});"
+                        "code": "import { whenOutOfViewport } from '@blackbyte/sugar/dom'\nwhenOutOfViewport($myCoolHTMLElement).then(($elm) => {\n  // do something with your element that has exit the viewport...\n});"
                     }
                 ],
                 "async": true,
@@ -28787,12 +29009,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenNearViewport($1)",
-                    "code": "whenNearViewport($1).then(\\$elm => {\n     $2\n});"
+                    "code": "whenNearViewport($1).then(\\$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenNearViewport } from '@blackbyte/sugar/dom'\nwhenNearViewport(myCoolHTMLElement).then($elm => {\n\t\t// do something with your element that has entered the viewport...\n});"
+                        "code": "import { whenNearViewport } from '@blackbyte/sugar/dom'\nwhenNearViewport($myCoolHTMLElement).then($elm => {\n  // do something with your element that has entered the viewport...\n});"
                     }
                 ],
                 "async": true,
@@ -28861,12 +29083,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenLinkLoaded($1)",
-                    "code": "whenLinkLoaded($1).then(\\$elm => {\n     $2\n});"
+                    "code": "whenLinkLoaded($1).then(\\$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenLinkLoaded } from '@blackbyte/sugar/dom'\nwhenLinkLoaded(myCoolHTMLLinlElement).then($link => {\n\t\t// do something when the link is loaded\n});"
+                        "code": "import { whenLinkLoaded } from '@blackbyte/sugar/dom'\nwhenLinkLoaded($myCoolHTMLLinlElement).then($link => {\n  // do something when the link is loaded\n});"
                     }
                 ],
                 "since": "1.0.0",
@@ -29045,7 +29267,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenInteract } from '@blackbyte/sugar/dom'\nwhenInteract(myCoolElement).then($elm => {\n     // do something...\n});"
+                        "code": "import { whenInteract } from '@blackbyte/sugar/dom'\nwhenInteract($elm).then($elm => {\n     // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -29147,12 +29369,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenInViewport($1)",
-                    "code": "whenInViewport($1).then(\\$elm => {\n     $2\n});"
+                    "code": "whenInViewport($1).then(\\$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenInViewport } from '@blackbyte/sugar/dom'\nconst promise = whenInViewport(myCoolHTMLElement).then((elm) => {\n\t\t// do something with your element that has entered the viewport...\n});\n// when you want to stop listening\npromise.cancel();"
+                        "code": "import { whenInViewport } from '@blackbyte/sugar/dom'\nconst promise = whenInViewport($myCoolHTMLElement).then((elm) => {\n  // do something with your element that has entered the viewport...\n});\n// when you want to stop listening\npromise.cancel();"
                     }
                 ],
                 "async": true,
@@ -29224,12 +29446,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenImagesLoaded($1)",
-                    "code": "whenImagesLoaded($1).then(imgs => {\n     $2\n});"
+                    "code": "whenImagesLoaded($1).then(imgs => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenImagesLoaded } from '@blackbyte/sugar/dom'\nwhenImagesLoaded([\n\t$img1, $img2, $img3\n]).on('loaded', $img => {\n   // do something with the loaded image\n}).then(imgs => {\n  // do something here\n})"
+                        "code": "import { whenImagesLoaded } from '@blackbyte/sugar/dom'\nwhenImagesLoaded([\n\t$img1, $img2, $img3\n]).then(imgs => {\n  // do something here\n})"
                     }
                 ],
                 "since": "1.0.0",
@@ -29297,12 +29519,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenImageLoaded($1)",
-                    "code": "whenImageLoaded($1).then(\\$img => {\n     $2\n});"
+                    "code": "whenImageLoaded($1).then(\\$img => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenImageLoaded } from '@blackbyte/sugar/dom'\n whenImageLoaded(myCoolHTMLImageElement).then(($img) => {\n\t\t// do something when the image is loaded\n});"
+                        "code": "import { whenImageLoaded } from '@blackbyte/sugar/dom'\nwhenImageLoaded($myCoolHTMLImageElement).then(($img) => {\n  // do something when the image is loaded\n});"
                     }
                 ],
                 "since": "1.0.0",
@@ -29373,12 +29595,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenIframeReady($1)",
-                    "code": "whenIframeReady($1).then(\\$elm => {\n     $2\n});"
+                    "code": "whenIframeReady($1).then(\\$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenIframeReady } from '@blackbyte/sugar/dom'\nwhenIframeReady($myCoolIframe).then($iframe => {\n     // do something...\n});"
+                        "code": "import { whenIframeReady } from '@blackbyte/sugar/dom'\nwhenIframeReady($myCoolIframe).then($iframe => {\n  // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -29463,12 +29685,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenEventListener($1, $2)",
-                    "code": "whenEventListener($1, $2).then(e: Event => {\n     $3\n});"
+                    "code": "whenEventListener($1, $2).then(e: Event => {\n  $3\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenEventListener } from '@blackbyte/sugar/dom'\nwhenEventListener('click', myCoolElm).then((e: Event) => {\n     // do something...\n});"
+                        "code": "import { whenEventListener } from '@blackbyte/sugar/dom'\nwhenEventListener('click', $elm).then((e: Event) => {\n  // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -29570,12 +29792,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenEntersViewport($1)",
-                    "code": "whenEntersViewport($1).then(\\$elm => {\n     $2\n});"
+                    "code": "whenEntersViewport($1).then(\\$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenEntersViewport } from '@blackbyte/sugar/dom'\nwhenEntersViewport($myElement).then(($elm) => {\n\t\t// do something with your element that has entered the viewport...\n});"
+                        "code": "import { whenEntersViewport } from '@blackbyte/sugar/dom'\nwhenEntersViewport($myElement).then(($elm) => {\n  // do something with your element that has entered the viewport...\n});"
                     }
                 ],
                 "async": true,
@@ -29648,12 +29870,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenDomReady()",
-                    "code": "whenDomReady().then(() => {\n     $1\n});"
+                    "code": "whenDomReady().then(() => {\n  $1\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenDomReady } from '@blackbyte/sugar/dom'\nwhenDomReady().then(() => {\n    // do something...\n});"
+                        "code": "import { whenDomReady } from '@blackbyte/sugar/dom'\nwhenDomReady().then(() => {\n  // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -29831,12 +30053,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenAttribute($1, $2)",
-                    "code": "whenAttribute($1, $2).then(value => {\n     $3\n});"
+                    "code": "whenAttribute($1, $2).then(value => {\n  $3\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenAttribute } from '@blackbyte/sugar/dom'\n\n// using promise\nwhenAttribute(myCoolHTMLElement, 'value').then(value => {\n     // do something...\n});\n\n// with a check function\nwhenAttribute(myCoolHTMLElement, 'value', {\n   check(newVal, oldVal) {\n\t      // make sure the value is a number\n\t\t  return typeof(newVal) === 'number';\n   }\n}).then(value => {\n     // do something...\n});"
+                        "code": "import { whenAttribute } from '@blackbyte/sugar/dom'\n\n// using promise\nwhenAttribute($myCoolHTMLElement, 'value').then(value => {\n  // do something...\n});\n\n// with a check function\nwhenAttribute($myCoolHTMLElement, 'value', {\n  check(newVal, oldVal) {\n   // make sure the value is a number\n   return typeof(newVal) === 'number';\n  }\n}).then(value => {\n  // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -29908,12 +30130,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "whenAnimationEnd($1)",
-                    "code": "whenAnimationEnd($1).then(\\$elm => {\n     $2\n});"
+                    "code": "whenAnimationEnd($1).then(\\$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { whenAnimationEnd } from '@blackbyte/sugar/dom'\nwhenAnimationEnd(myCoolElm).then(($elm) => {\n     // do something...\n});"
+                        "code": "import { whenAnimationEnd } from '@blackbyte/sugar/dom'\nwhenAnimationEnd(myCoolElm).then(($elm) => {\n  // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -30295,7 +30517,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { getTranslateProperties } from '@blackbyte/sugar/dom'\nconst props = getTranslateProperties(myCoolHTMLElement);\n// output format\n// {\n// \tx : 100,\n// \ty : 0,\n// \tz : 0\n// }"
+                        "code": "import { getTranslateProperties } from '@blackbyte/sugar/dom'\nconst props = getTranslateProperties($myCoolHTMLElement);\n// output format\n// {\n// \tx : 100,\n// \ty : 0,\n// \tz : 0\n// }"
                     }
                 ],
                 "since": "1.0.0",
@@ -30327,8 +30549,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -30367,7 +30589,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { getTransitionProperties } from '@blackbyte/sugar/dom'\nconst props = getTransitionProperties(myCoolHTMLElement);\n// output format\n// {\n// \tproperty : ['all'],\n// \tduration : [200],\n// \tdelay : [0],\n// \ttimingFunction : ['linear'],\n// \ttotalDuration : 200\n// }"
+                        "code": "import { getTransitionProperties } from '@blackbyte/sugar/dom'\nconst props = getTransitionProperties($myCoolHTMLElement);\n// output format\n// {\n// \tproperty : ['all'],\n// \tduration : [200],\n// \tdelay : [0],\n// \ttimingFunction : ['linear'],\n// \ttotalDuration : 200\n// }"
                     }
                 ],
                 "since": "1.0.0",
@@ -30439,7 +30661,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { getTransformProperties } from '@blackbyte/sugar/dom'\nconst props = getTransformProperties(myCoolHTMLElement);\n// output format\n// {\n// \ttranslateX : 100,\n// \ttranslateY : 0,\n// \ttranslateZ : 0,\n//   rotateX: 0,\n//   rotateY: 0,\n//   rotateZ: 0\n// }"
+                        "code": "import { getTransformProperties } from '@blackbyte/sugar/dom'\nconst props = getTransformProperties($myCoolHTMLElement);\n// output format\n// {\n//   translateX : 100,\n//   translateY : 0,\n//   translateZ : 0,\n//   rotateX: 0,\n//   rotateY: 0,\n//   rotateZ: 0\n// }"
                     }
                 ],
                 "since": "1.0.0",
@@ -30471,8 +30693,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -30524,7 +30746,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { getStyleProperty } from '@blackbyte/sugar/dom'\nconst opacity = getStyleProperty(myCoolHTMLElement, 'opacity');"
+                        "code": "import { getStyleProperty } from '@blackbyte/sugar/dom'\nconst opacity = getStyleProperty($myCoolHTMLElement, 'opacity');"
                     }
                 ],
                 "since": "1.0.0",
@@ -30602,7 +30824,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { getScaleProperty } from '@blackbyte/sugar/dom'\nconst props = getScaleProperty(myCoolHTMLElement);\n// output format\n// 2"
+                        "code": "import { getScaleProperty } from '@blackbyte/sugar/dom'\nconst props = getScaleProperty($myCoolHTMLElement);\n// output format\n// 2"
                     }
                 ],
                 "since": "1.0.0",
@@ -30677,7 +30899,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { getRotateProperties } from '@blackbyte/sugar/dom'\nconst props = getRotateProperties(myCoolHTMLElement);\n// output format\n// {\n// \tx : 100,\n// \ty : 0,\n// \tz : 0\n// }"
+                        "code": "import { getRotateProperties } from '@blackbyte/sugar/dom'\nconst props = getRotateProperties($myCoolHTMLElement);\n// output format\n// {\n// \tx : 100,\n// \ty : 0,\n// \tz : 0\n// }"
                     }
                 ],
                 "since": "1.0.0",
@@ -30981,8 +31203,8 @@
                             "raw": "string"
                         },
                         "description": "CSSRule type to search for, valid types: unknown, style, charset, import, media, fontface, page, keyframes, keyframe, namespace, counter, supports, document, fontfeature, viewport, region",
-                        "default": "'style'",
-                        "defaultStr": "'style'"
+                        "default": "style",
+                        "defaultStr": "style"
                     },
                     "rules": {
                         "name": "rules",
@@ -31077,8 +31299,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -31117,7 +31339,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { getAnimationProperties } from '@blackbyte/sugar/dom'\nconst props = getAnimationProperties(myCoolHTMLElement);\n// output format\n// {\n// \tname : ['animation1'],\n// \tduration : [200],\n// \tdelay : [0],\n// \ttimingFunction : ['linear'],\n// \titerationCount : [1],\n// \tdirection : ['forward'],\n// \ttotalDuration : 200\n// }"
+                        "code": "import { getAnimationProperties } from '@blackbyte/sugar/dom'\nconst props = getAnimationProperties($myCoolHTMLElement);\n// output format\n// {\n// \tname : ['animation1'],\n// \tduration : [200],\n// \tdelay : [0],\n// \ttimingFunction : ['linear'],\n// \titerationCount : [1],\n// \tdirection : ['forward'],\n// \ttotalDuration : 200\n// }"
                     }
                 ],
                 "since": "1.0.0",
@@ -31251,7 +31473,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { querySelectorUp } from '@blackbyte/sugar/dom'\nconst closestElm =  querySelectorUp(myCoolElement, '.my-cool-class');\nif (closestElm) {\n\t\t// we have found en element that matches the selector\n}\n// the selector param can be a function that need to return either true or false like so:\n querySelectorUp(myCoolElement, (elm) => {\n  return elm.hasAttribute('my-cool-attribute')\n})"
+                        "code": "import { querySelectorUp } from '@blackbyte/sugar/dom'\nconst closestElm =  querySelectorUp($elm, '.my-cool-class');\nif (closestElm) {\n  // we have found en element that matches the selector\n}\n// the selector param can be a function that need to return either true or false like so:\nquerySelectorUp($elm, (elm) => {\n  return elm.hasAttribute('my-cool-attribute')\n})"
                     }
                 ],
                 "since": "1.0.0",
@@ -31336,8 +31558,8 @@
                     "description": "An object with a cancel method to stop the query listening"
                 },
                 "setting": {
-                    "rootNode": {
-                        "name": "rootNode",
+                    "$rootNode": {
+                        "name": "$rootNode",
                         "type": {
                             "types": [
                                 {
@@ -31415,12 +31637,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "querySelectorLive($1, $2)",
-                    "code": "querySelectorLive($1, \\$elm => {\n     $2\n});"
+                    "code": "querySelectorLive($1, \\$elm => {\n  $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { querySelectorLive } from '@blackbyte/sugar/dom'\nconst query = querySelectorLive('.my-cool-item', (node, api) => {\n\t    // do something here with the detected node\n     // call api.cancel if you want to stop listening for this selector\n     api.cancel();\n});\n// cancel the query manually when needed\nquery.cancel();"
+                        "code": "import { querySelectorLive } from '@blackbyte/sugar/dom'\nconst query = querySelectorLive('.my-cool-item', (node, api) => {\n  // do something here with the detected node\n  // call api.cancel if you want to stop listening for this selector\n  api.cancel();\n});\n// cancel the query manually when needed\nquery.cancel();"
                     }
                 ],
                 "async": true,
@@ -31517,8 +31739,8 @@
                         "default": null,
                         "defaultStr": "null"
                     },
-                    "rootNode": {
-                        "name": "rootNode",
+                    "$rootNode": {
+                        "name": "$rootNode",
                         "type": {
                             "types": [
                                 {
@@ -31547,7 +31769,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { querySelectorAll } from '@blackbyte/sugar/dom';\n// simple query\nconst elms = querySelectorAll('.a-cool-css-selector');\n\n// get elements that are in the viewport\nconst elms = querySelectorAll('.a-cool-css-selector', {\n\t\tinViewport : true\n});"
+                        "code": "import { querySelectorAll } from '@blackbyte/sugar/dom';\n// simple query\nconst elms = querySelectorAll('.a-cool-css-selector');\n\n// get elements that are in the viewport\nconst elms = querySelectorAll('.a-cool-css-selector', {\n  inViewport : true\n});"
                     }
                 ],
                 "since": "1.0.0",
@@ -31646,8 +31868,8 @@
                         "default": null,
                         "defaultStr": "null"
                     },
-                    "rootNode": {
-                        "name": "rootNode",
+                    "$rootNode": {
+                        "name": "$rootNode",
                         "type": {
                             "types": [
                                 {
@@ -31676,7 +31898,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { querySelector } from '@blackbyte/sugar/dom';\n// simple query\nconst elm = querySelector('.a-cool-css-selector');\n\n// get an element that is in the viewport\nconst elm = querySelector('.a-cool-css-selector', {\n\t\tinViewport : true\n});"
+                        "code": "import { querySelector } from '@blackbyte/sugar/dom';\n// simple query\nconst elm = querySelector('.a-cool-css-selector');\n\n// get an element that is in the viewport\nconst elm = querySelector('.a-cool-css-selector', {\n  inViewport : true\n});"
                     }
                 ],
                 "since": "1.0.0",
@@ -31764,7 +31986,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { previousElement } from '@blackbyte/sugar/dom'\nconst previousElm = previousElement(myCoolElement, '.my-cool-class');\nif (previousElm) {\n\t\t// we have found en element that matches the selector\n}"
+                        "code": "import { previousElement } from '@blackbyte/sugar/dom'\nconst previousElm = previousElement($elm, '.my-cool-class');\nif (previousElm) {\n  // we have found en element that matches the selector\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -31852,7 +32074,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { nextElement } from '@blackbyte/sugar/dom'\nconst nextElm =  nextElement(myCoolElement, '.my-cool-class');\nif (nextElm) {\n\t\t// we have found en element that matches the selector\n}"
+                        "code": "import { nextElement } from '@blackbyte/sugar/dom'\nconst nextElm =  nextElement($elm, '.my-cool-class');\nif (nextElm) {\n  // we have found en element that matches the selector\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -31939,6 +32161,31 @@
                     },
                     "description": "The nearest element found"
                 },
+                "setting": {
+                    "[direction]": {
+                        "name": "[direction]",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "string",
+                                    "value": "top'"
+                                },
+                                {
+                                    "type": "'right'"
+                                },
+                                {
+                                    "type": "'bottom'"
+                                },
+                                {
+                                    "type": "'left'"
+                                }
+                            ],
+                            "raw": "'top' | 'right' | 'bottom' | 'left'"
+                        },
+                        "description": "The direction to search in. Can be \"top\", \"right\", \"bottom\", \"left\"",
+                        "defaultStr": ""
+                    }
+                },
                 "platform": [
                     {
                         "name": "js",
@@ -31954,7 +32201,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { nearestElement } from '@blackbyte/sugar/dom'\nnearestElement(myCoolElement, document.querySelectorAll('.my-cool-elements'), {\n     direction: 'top'\n});"
+                        "code": "import { nearestElement } from '@blackbyte/sugar/dom'\nnearestElement($elm, document.querySelectorAll('.my-cool-elements'), {\n  direction: 'top'\n});"
                     }
                 ],
                 "since": "1.0.0",
@@ -32039,7 +32286,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { matches } from '@blackbyte/sugar/dom'\nif (matches(myCoolHTMLElement, '.my-cool-css-selector')) {\n\t\t// the element match the selector\n}"
+                        "code": "import { matches } from '@blackbyte/sugar/dom'\nif (matches(myCoolHTMLElement, '.my-cool-css-selector')) {\n  // the element match the selector\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -32283,7 +32530,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { closestNotVisibleElement } from '@blackbyte/sugar/dom'\nconst closestElm =  closestNotVisibleElement(myCoolElement);\nif (closestElm) {\n\t\t// we have found en element that is not visible\n}"
+                        "code": "import { closestNotVisibleElement } from '@blackbyte/sugar/dom'\nconst closestElm =  closestNotVisibleElement($elm);\nif (closestElm) {\n  // we have found en element that is not visible\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -32315,8 +32562,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "$elm": {
-                        "name": "$elm",
+                    "$from": {
+                        "name": "$from",
                         "type": {
                             "types": [
                                 {
@@ -32325,7 +32572,7 @@
                             ],
                             "raw": "HTMLElement"
                         },
-                        "description": "The element to start on",
+                        "description": "The element to start from",
                         "defaultStr": ""
                     },
                     "selector": {
@@ -32366,12 +32613,12 @@
                 "namespace": "@blackbyte.sugar.js.dom.query",
                 "status": "stable",
                 "snippet": {
-                    "label": "closestElement($1, $2)"
+                    "label": "querySelectorUp($1, $2)"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { closestElement } from '@blackbyte/sugar/dom'\nconst closestElm =  closestElement(myCoolElement, '.my-cool-class');\nif (closestElm) {\n\t\t// we have found en element that matches the selector\n}\n// the selector param can be a function that need to return either true or false like so:\nclosest(myCoolElement, (elm) => {\n  return elm.hasAttribute('my-cool-attribute')\n})"
+                        "code": "import {closestElement } from '@blackbyte/sugar/dom'\nconst closestElm = closestElement($elm, '.my-cool-class');\nif (closestElm) {\n  // we have found en element that matches the selector\n}\n// the selector param can be a function that need to return either true or false like so:\nclosestElement($elm, (elm) => {\n  return elm.hasAttribute('my-cool-attribute')\n})"
                     }
                 ],
                 "since": "1.0.0",
@@ -32403,18 +32650,21 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "e": {
-                        "name": "e",
+                    "event": {
+                        "name": "event",
                         "type": {
                             "types": [
                                 {
                                     "type": "MouseEvent"
                                 },
                                 {
+                                    "type": "PointerEvent"
+                                },
+                                {
                                     "type": "TouchEvent"
                                 }
                             ],
-                            "raw": "MouseEvent|TouchEvent"
+                            "raw": "MouseEvent|PointerEvent|TouchEvent"
                         },
                         "description": "The event to get the position from",
                         "defaultStr": ""
@@ -32437,7 +32687,7 @@
                         "description": ""
                     }
                 ],
-                "description": "Get the position from an event &quot;touchstart&quot;, &quot;touchmove&quot;, &quot;touchend&quot;, &quot;mousedown&quot;, &quot;mousemove&quot; or &quot;mouseup&quot;.",
+                "description": "Get the position from an event like:\n- `touchstart`\n- `touchmove`\n- `touchend`\n- `touchcancel`\n- `mousedown`\n- `mouseup`\n- `mousemove`\n- `mouseover`\n- `mouseout`\n- `mouseenter`\n- `mouseleave`\n- `pointerdown`\n- `pointerup`\n- `pointermove`\n- `pointerover`\n- `pointerout`\n- `pointerenter`\n- `pointerleave`",
                 "namespace": "@blackbyte.sugar.js.dom.position",
                 "status": "stable",
                 "snippet": {
@@ -32478,8 +32728,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -32554,7 +32804,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { onSwipe } from '@blackbyte/sugar/dom'\nonSwipe(myCoolElm, (swipe) => {\n\t// check the swipe direction\n\tif (swipe.left) {\n\t\t// do something...\n\t}\n\t// support : left, right, up, down\n\t// etc...\n}, {\n\tthreshold : 50\n});"
+                        "code": "import { onSwipe } from '@blackbyte/sugar/dom'\nonSwipe($elm, (swipe) => {\n  // check the swipe direction\n  if (swipe.left) {\n    // do something...\n\t }\n\t // support : left, right, up, down\n\t // etc...\n}, {\n  threshold : 50\n});"
                     }
                 ],
                 "async": true,
@@ -32698,7 +32948,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { onScrollEnd } from '@blackbyte/sugar/dom';\nonScrollEnd($elm, () => {\n     // do something\n}, {\n   offset: 50\n});"
+                        "code": "import { onScrollEnd } from '@blackbyte/sugar/dom';\nonScrollEnd($elm, () => {\n  // do something\n}, {\n  offset: 50\n});"
                     }
                 ],
                 "async": true,
@@ -32731,8 +32981,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -32804,7 +33054,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { onDrag } from '@blackbyte/sugar/dom'\nonDrag($myElement, (drag) => {\n   // do something...\n});"
+                        "code": "import { onDrag } from '@blackbyte/sugar/dom'\nonDrag($elm, (drag) => {\n  // do something...\n});"
                     }
                 ],
                 "async": true,
@@ -32837,8 +33087,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -32877,7 +33127,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { offsetFromViewport } from '@blackbyte/sugar/dom'\nconst offsetFromViewport = offset(myCoolElement);\n// output : { top : 200, left : 300 }"
+                        "code": "import { offsetFromViewport } from '@blackbyte/sugar/dom'\nconst offsetFromViewport = offset($elm);\n// output : { top : 200, left : 300 }"
                     }
                 ],
                 "since": "1.0.0",
@@ -32909,8 +33159,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -32949,7 +33199,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { offsetFromParent } from '@blackbyte/sugar/dom'\nconst offsetFromParentElm = offsetFromParent(myCoolElement);\n// output : { top : 200, left : 300 }"
+                        "code": "import { offsetFromParent } from '@blackbyte/sugar/dom'\nconst offsetFromParentElm = offsetFromParent($elm);\n// output : { top : 200, left : 300 }"
                     }
                 ],
                 "since": "1.0.0",
@@ -33272,7 +33522,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { injectStyle } from '@blackbyte/sugar/dom';\n injectStyle('a { color: red; }');"
+                        "code": "import { injectStyle } from '@blackbyte/sugar/dom';\ninjectStyle('a { color: red; }');"
                     }
                 ],
                 "since": "1.0.0",
@@ -33344,7 +33594,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { injectScript } from '@blackbyte/sugar/dom'\n injectScript('dist/js/app.js')"
+                        "code": "import { injectScript } from '@blackbyte/sugar/dom'\ninjectScript('dist/js/app.js')"
                     }
                 ],
                 "since": "1.0.0",
@@ -33418,7 +33668,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { injectIframeContent } from '@blackbyte/sugar/dom'\n injectIframeContent($myIframe, '<html>...</html>');"
+                        "code": "import { injectIframeContent } from '@blackbyte/sugar/dom'\ninjectIframeContent($myIframe, '<html>...</html>');"
                     }
                 ],
                 "since": "1.0.0",
@@ -33492,7 +33742,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { injectHtml } from '@blackbyte/sugar/dom'\n injectHtml('<html>...</html>`, $myElement);"
+                        "code": "import { injectHtml } from '@blackbyte/sugar/dom'\ninjectHtml('<html>...</html>`, $myElement);"
                     }
                 ],
                 "since": "1.0.0",
@@ -33524,8 +33774,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "obj": {
-                        "name": "obj",
+                    "$iframe": {
+                        "name": "$iframe",
                         "type": {
                             "types": [
                                 {
@@ -33598,7 +33848,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { iframeAutoSize } from '@blackbyte/sugar/dom';\niframeAutoSize($1, $2);"
+                        "code": "import { iframeAutoSize } from '@blackbyte/sugar/dom';\niframeAutoSize($iframe);"
                     }
                 ],
                 "async": true,
@@ -33921,7 +34171,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { viewportEvents } from '@blackbyte/sugar/dom';\nviewportEvents($elm);\n$elm.addEventListener('viewport.enter', (e) => {\n     // do something on enter\n});\n$elm.addEventListener('viewport.leave', (e) => {\n     // do something on leave\n});"
+                        "code": "import { viewportEvents } from '@blackbyte/sugar/dom';\nviewportEvents($elm);\n$elm.addEventListener('viewport.enter', (e) => {\n  // do something on enter\n});\n$elm.addEventListener('viewport.leave', (e) => {\n  // do something on leave\n});"
                     }
                 ],
                 "changelog": [
@@ -34063,8 +34313,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -34129,8 +34379,8 @@
                     "raw": "Function"
                 },
                 "param": {
-                    "elm": {
-                        "name": "elm",
+                    "$elm": {
+                        "name": "$elm",
                         "type": {
                             "types": [
                                 {
@@ -34300,7 +34550,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { __reloeadStylesheets } from '@blackbyte/sugar/dom';\nreloadStylesheets();"
+                        "code": "import { reloeadStylesheets } from '@blackbyte/sugar/dom';\nreloadStylesheets();"
                     }
                 ],
                 "since": "1.0.0",

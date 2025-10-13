@@ -24,7 +24,7 @@ Get the css animation properties from an HTMLElement in an object format
 ## Params
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
+<span class="docmap_name">$elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
 <p class="docmap_description">The element to get the properties from</p>
 </li>
 </ol>
@@ -43,7 +43,7 @@ Get the css animation properties from an HTMLElement in an object format
 <s-code language="js" header>
 ```js
 import { getAnimationProperties } from '@blackbyte/sugar/dom'
-const props = getAnimationProperties(myCoolHTMLElement);
+const props = getAnimationProperties($myCoolHTMLElement);
 // output format
 // {
 // 	name : ['animation1'],

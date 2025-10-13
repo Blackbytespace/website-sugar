@@ -15,6 +15,7 @@ export default {
     title: 'Sugar',
     description:
       'The toolkit that you missed...<br />...like <span class="color-accent">a sugar in your coffee!</span>',
+    withLove: `Made with <span class="color-accent">♥</span> by Blackbyte`,
   },
   version: packageJson.version,
   license: {

@@ -24,7 +24,7 @@ Detect drag &quot;gesture&quot; with the mouse or touch
 ## Params
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
+<span class="docmap_name">$elm<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">HTMLElement</span>
 <p class="docmap_description">The HTMLElement on which to detect the swipe</p>
 </li>
 <li class="docmap_item">
@@ -42,8 +42,8 @@ Detect drag &quot;gesture&quot; with the mouse or touch
 <s-code language="js" header>
 ```js
 import { onDrag } from '@blackbyte/sugar/dom'
-onDrag($myElement, (drag) => {
-   // do something...
+onDrag($elm, (drag) => {
+  // do something...
 });
 ```
 </s-code>

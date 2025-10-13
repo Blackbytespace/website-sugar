@@ -1,7 +1,7 @@
 ---
 title: 'positionFromEvent'
 namespace: '@blackbyte.sugar.js.dom.position'
-description: 'Get the position from an event &quot;touchstart&quot;, &quot;touchmove&quot;, &quot;touchend&quot;, &quot;mousedown&quot;, &quot;mousemove&quot; or &quot;mouseup&quot;.'
+description: 'Get the position from an event like: - `touchstart` - `touchmove` - `touchend` - `touchcancel` - `mousedown` - `mouseup` - `mousemove` - `mouseover` - `mouseout` - `mouseenter` - `mouseleave` - `pointerdown` - `pointerup` - `pointermove` - `pointerover` - `pointerout` - `pointerenter` - `pointerleave`'
 type: 'Function'
 status: 'stable'
 since: '1.0.0'
@@ -18,13 +18,31 @@ author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"http
 </div>
 <div class="docmap_namespace">@blackbyte.sugar.js.dom.position</div>
 <div class="docmap_description typo-lead typo-format">
-Get the position from an event &quot;touchstart&quot;, &quot;touchmove&quot;, &quot;touchend&quot;, &quot;mousedown&quot;, &quot;mousemove&quot; or &quot;mouseup&quot;.
+Get the position from an event like:
+- `touchstart`
+- `touchmove`
+- `touchend`
+- `touchcancel`
+- `mousedown`
+- `mouseup`
+- `mousemove`
+- `mouseover`
+- `mouseout`
+- `mouseenter`
+- `mouseleave`
+- `pointerdown`
+- `pointerup`
+- `pointermove`
+- `pointerover`
+- `pointerout`
+- `pointerenter`
+- `pointerleave`
 </div>
 <div class="docmap_params">
 ## Params
 <ol class="docmap_list">
 <li class="docmap_item">
-<span class="docmap_name">e<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">MouseEvent&vert;TouchEvent</span>
+<span class="docmap_name">event<span class="docmap_required">*</span></span><span class="docmap_default">-</span> <span class="docmap_type">MouseEvent&vert;PointerEvent&vert;TouchEvent</span>
 <p class="docmap_description">The event to get the position from</p>
 </li>
 </ol>

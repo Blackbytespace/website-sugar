@@ -15828,6 +15828,112 @@
                 "relPath": "src/shared/datetime/utcTime.ts",
                 "children": {}
             },
+            "@blackbyte.sugar.shared.datetime.toYyyyMmDd": {
+                "id": "@blackbyte.sugar.shared.datetime.toYyyyMmDd",
+                "name": "toYyyyMmDd",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "date": {
+                        "name": "date",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The date (string) to convert to `YYYY-MM-DD`",
+                        "defaultStr": ""
+                    },
+                    "settings": {
+                        "name": "settings",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "TtoYyyyMmDdSettings"
+                                }
+                            ],
+                            "raw": "TtoYyyyMmDdSettings"
+                        },
+                        "description": "Some settings to configure your parsing",
+                        "default": {},
+                        "defaultStr": "{}"
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "String"
+                            }
+                        ],
+                        "raw": "String"
+                    },
+                    "description": "The date formatted as `YYYY-MM-DD`"
+                },
+                "setting": {
+                    "format": {
+                        "name": "format",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "If you know the format of your date string, you can pass it here. This will make the parsing faster and more reliable. See [Luxon documentation](https://moment.github.io/luxon/#/parsing?id=table-of-tokens) for the list of supported tokens.",
+                        "default": "''",
+                        "defaultStr": "''"
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to pass any date string or Date instance and get back this\none formatted as `YYYY-MM-DD`.\nThis format is useful when you need to store dates in a database, set a date input value, etc...\nUnder the hood, it make uses of the wonderful [Luxon](https://moment.github.io/luxon) library.",
+                "namespace": "@blackbyte.sugar.shared.datetime",
+                "status": "stable",
+                "snippet": {
+                    "label": "toYyyyMmDd($1, $2, $3)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { toYyyyMmDd } from '@blackbyte/sugar/datetime';\ntoYyyyMmDd('2025-10-15T14:30:00+02:00'); // '2025-10-15'"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://moment.github.io/luxon",
+                        "description": ""
+                    }
+                ],
+                "filename": "toYyyyMmDd.ts",
+                "extension": "ts",
+                "relPath": "src/shared/datetime/toYyyyMmDd.ts",
+                "children": {}
+            },
             "@blackbyte.sugar.shared.datetime.timeAgo": {
                 "id": "@blackbyte.sugar.shared.datetime.timeAgo",
                 "name": "timeAgo",
@@ -16011,6 +16117,112 @@
                 "relPath": "src/shared/datetime/sleep.ts",
                 "children": {}
             },
+            "@blackbyte.sugar.shared.datetime.parseDate": {
+                "id": "@blackbyte.sugar.shared.datetime.parseDate",
+                "name": "parseDate",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "date": {
+                        "name": "date",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The date string to parse",
+                        "defaultStr": ""
+                    },
+                    "settings": {
+                        "name": "settings",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "TParseDateSettings"
+                                }
+                            ],
+                            "raw": "TParseDateSettings"
+                        },
+                        "description": "Some settings to configure your parsing",
+                        "default": {},
+                        "defaultStr": "{}"
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "Date"
+                            }
+                        ],
+                        "raw": "Date"
+                    },
+                    "description": "The `Date` instance representing your date string"
+                },
+                "setting": {
+                    "format": {
+                        "name": "format",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "If you know the format of your date string, you can pass it here. This will make the parsing faster and more reliable. See [Luxon documentation](https://moment.github.io/luxon/#/parsing?id=table-of-tokens) for the list of supported tokens.",
+                        "default": "''",
+                        "defaultStr": "''"
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to parse a date string. It will returns the `Date` instance for this date.\nUnder the hood, it make uses of the wonderful [Luxon](https://moment.github.io/luxon) library.\nMake sure to use the library if you need more control over your dates.\nLuxon support these date formats:\n\n- ISO 8601\n- RFC2822\n- HTTP (header)",
+                "namespace": "@blackbyte.sugar.shared.datetime",
+                "status": "stable",
+                "snippet": {
+                    "label": "parseDate($1, $2)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { parseDate } from '@blackbyte/sugar/datetime';\nparseDate('2025-10-12');\nparseDate('2024-10-15T10:30:00Z');"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://moment.github.io/luxon",
+                        "description": ""
+                    }
+                ],
+                "filename": "parseDate.ts",
+                "extension": "ts",
+                "relPath": "src/shared/datetime/parseDate.ts",
+                "children": {}
+            },
             "@blackbyte.sugar.shared.datetime.formatDuration": {
                 "id": "@blackbyte.sugar.shared.datetime.formatDuration",
                 "name": "formatDuration",
@@ -16085,6 +16297,112 @@
                 "filename": "formatDuration.ts",
                 "extension": "ts",
                 "relPath": "src/shared/datetime/formatDuration.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.shared.datetime.diffBetweenDates": {
+                "id": "@blackbyte.sugar.shared.datetime.diffBetweenDates",
+                "name": "diffBetweenDates",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "date": {
+                        "name": "date",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The date string to parse",
+                        "defaultStr": ""
+                    },
+                    "settings": {
+                        "name": "settings",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "TDiffBetweenDatesSettings"
+                                }
+                            ],
+                            "raw": "TDiffBetweenDatesSettings"
+                        },
+                        "description": "Some settings to configure your parsing",
+                        "default": {},
+                        "defaultStr": "{}"
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "Date"
+                            }
+                        ],
+                        "raw": "Date"
+                    },
+                    "description": "The `Date` instance representing your date string"
+                },
+                "setting": {
+                    "format": {
+                        "name": "format",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "If you know the format of your date string, you can pass it here. This will make the parsing faster and more reliable. See [Luxon documentation](https://moment.github.io/luxon/#/parsing?id=table-of-tokens) for the list of supported tokens.",
+                        "default": "''",
+                        "defaultStr": "''"
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to get the difference between two date strings.\nIt will returns you an object with the difference represented with these properties (years, months, days, hours, minutes, seconds).\nUnder the hood, it make uses of the wonderful [Luxon](https://moment.github.io/luxon) library.",
+                "namespace": "@blackbyte.sugar.shared.datetime",
+                "status": "stable",
+                "snippet": {
+                    "label": "diffBetweenDates($1, $2, $3)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { diffBetweenDates } from '@blackbyte/sugar/datetime';\ndiffBetweenDates('1945-10-12', '2025-10-15');"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://moment.github.io/luxon",
+                        "description": ""
+                    }
+                ],
+                "filename": "diffBetweenDates.ts",
+                "extension": "ts",
+                "relPath": "src/shared/datetime/diffBetweenDates.ts",
                 "children": {}
             },
             "@blackbyte.sugar.shared.datetime.convertTime": {

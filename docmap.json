@@ -28540,7 +28540,7 @@
                         "description": ""
                     }
                 ],
-                "description": "This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, etc...\n1. `-in-viewport`: Added when the section is in the viewport",
+                "description": "This feature allows you to add some classes on your sections when they are in the viewport, near the viewport, above, etc...\n1. `-in-viewport`: Added when the section is in the viewport\n2. `-from-above`: Added when the section enters the viewport from above\n3. `-from-below`: Added when the section enters the viewport from below\n4. `-above-viewport`: Added when the section is above the viewport\n5. `-below-viewport`: Added when the section is below the viewport",
                 "namespace": "@blackbyte.sugar.js.dom.feature",
                 "status": "stable",
                 "snippet": {
@@ -35851,7 +35851,7 @@
                 "namespace": "@blackbyte.sugar.js.clipboard",
                 "status": "stable",
                 "snippet": {
-                    "label": "__readFile($1)"
+                    "label": "readFile($1)"
                 },
                 "example": [
                     {
@@ -35924,7 +35924,7 @@
                 "namespace": "@blackbyte.sugar.js.clipboard",
                 "status": "stable",
                 "snippet": {
-                    "label": "__copy($1)"
+                    "label": "copyText($1)"
                 },
                 "example": [
                     {
@@ -36003,7 +36003,7 @@
                 "namespace": "@blackbyte.sugar.js.clipboard",
                 "status": "stable",
                 "snippet": {
-                    "label": "__copyFile($1)"
+                    "label": "copyFile($1)"
                 },
                 "example": [
                     {
@@ -36033,6 +36033,68 @@
                 "filename": "copyFile.ts",
                 "extension": "ts",
                 "relPath": "src/js/clipboard/copyFile.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.js.clipboard.copyElement": {
+                "id": "@blackbyte.sugar.js.clipboard.copyElement",
+                "name": "copyElement",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "$elm": {
+                        "name": "$elm",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLElement"
+                                }
+                            ],
+                            "raw": "HTMLElement"
+                        },
+                        "description": "The dom node element to copy to the clipboard",
+                        "defaultStr": ""
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to copy to the clipboard the passed dom node element with his style",
+                "namespace": "@blackbyte.sugar.js.clipboard",
+                "status": "stable",
+                "snippet": {
+                    "label": "copyElement($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { copyElement } from '@blackbyte/sugar/clipboard';\ncopyElement($elm);"
+                    }
+                ],
+                "async": true,
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "copyElement.ts",
+                "extension": "ts",
+                "relPath": "src/js/clipboard/copyElement.ts",
                 "children": {}
             }
         }

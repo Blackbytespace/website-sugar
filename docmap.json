@@ -28519,6 +28519,72 @@
                         "default": "'-in-viewport'",
                         "defaultStr": "'-in-viewport'"
                     },
+                    "keepInClassWhenAbove": {
+                        "name": "keepInClassWhenAbove",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Boolean"
+                                }
+                            ],
+                            "raw": "Boolean"
+                        },
+                        "description": "Whether to keep the inClass when the section is above the viewport",
+                        "default": false,
+                        "defaultStr": "false"
+                    },
+                    "[fromAboveClass='-from-above'] The class to add when the section enters the viewport from above": {
+                        "name": "[fromAboveClass='-from-above'] The class to add when the section enters the viewport from above",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": null,
+                        "defaultStr": ""
+                    },
+                    "[fromBelowClass='-from-below'] The class to add when the section enters the viewport from below": {
+                        "name": "[fromBelowClass='-from-below'] The class to add when the section enters the viewport from below",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": null,
+                        "defaultStr": ""
+                    },
+                    "[aboveClass='-above-viewport'] The class to add when the section is above the viewport": {
+                        "name": "[aboveClass='-above-viewport'] The class to add when the section is above the viewport",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": null,
+                        "defaultStr": ""
+                    },
+                    "[belowClass='-below-viewport'] The class to add when": {
+                        "name": "[belowClass='-below-viewport'] The class to add when",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": null,
+                        "defaultStr": ""
+                    },
                     "offset": {
                         "name": "offset",
                         "type": {

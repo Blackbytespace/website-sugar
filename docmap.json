@@ -28629,78 +28629,6 @@
                 "relPath": "src/js/feature/sectionClasses.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.feature.scrollProperties": {
-                "id": "@blackbyte.sugar.js.dom.feature.scrollProperties",
-                "name": "scrollProperties",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Function"
-                        }
-                    ],
-                    "raw": "Function"
-                },
-                "param": {
-                    "settings": {
-                        "name": "settings",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "TScrollPropertiesSettings"
-                                }
-                            ],
-                            "raw": "TScrollPropertiesSettings"
-                        },
-                        "description": "The settings you want to override",
-                        "default": {},
-                        "defaultStr": "{}"
-                    }
-                },
-                "setting": {
-                    "$elm": {
-                        "name": "$elm",
-                        "type": {
-                            "types": [
-                                {
-                                    "type": "HTMLElement"
-                                }
-                            ],
-                            "raw": "HTMLElement"
-                        },
-                        "description": "The element on which to apply the css properties",
-                        "default": "document.body",
-                        "defaultStr": "document.body"
-                    }
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "This feature allows you to automatically apply css properties on the element passed in settings depending on the scroll position.\nThe properties that are applied are:\n- `--scroll-x`: The current scroll x position\n- `--scroll-y`: The current scroll y position",
-                "namespace": "@blackbyte.sugar.js.dom.feature",
-                "status": "stable",
-                "snippet": {
-                    "label": "scrollProperties($1);"
-                },
-                "example": [
-                    {
-                        "language": "js",
-                        "code": "import { scrollProperties } from '@blackbyte/sugar/features';\nscrollProperties();"
-                    }
-                ],
-                "since": "1.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "scrollProperties.ts",
-                "extension": "ts",
-                "relPath": "src/js/feature/scrollProperties.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.feature.scrollClasses": {
                 "id": "@blackbyte.sugar.js.dom.feature.scrollClasses",
                 "name": "scrollClasses",
@@ -28813,6 +28741,106 @@
                 "filename": "scrollClasses.ts",
                 "extension": "ts",
                 "relPath": "src/js/feature/scrollClasses.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.js.dom.feature.features": {
+                "id": "@blackbyte.sugar.js.dom.feature.features",
+                "name": "features",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "settings": {
+                        "name": "settings",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "string",
+                                    "value": "all'"
+                                },
+                                {
+                                    "type": "TFeaturesSettings"
+                                }
+                            ],
+                            "raw": "'all' | TFeaturesSettings"
+                        },
+                        "description": "The features you want to activate with some settings associated if needed",
+                        "default": {},
+                        "defaultStr": "{}"
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to activate some features like the `disableTitleTooltip`,`sectionClasses`, etc...\nAvailable features are:\n- `disableTitleTooltip`\n- `scrollClasses`\n- `sectionClasses`",
+                "namespace": "@blackbyte.sugar.js.dom.feature",
+                "status": "stable",
+                "snippet": {
+                    "label": "features($1);"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { features } from '@blackbyte/sugar/features';\nfeatures('all');"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "features.ts",
+                "extension": "ts",
+                "relPath": "src/js/feature/features.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.js.dom.feature.disableTitleTooltips": {
+                "id": "@blackbyte.sugar.js.dom.feature.disableTitleTooltips",
+                "name": "disableTitleTooltips",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to disable the ugly tooltips that displays when hover a link/image/etc... with a &quot;title&quot; attribute.\nIf you want to support accessibility, make use of the &quot;aria-label&quot; attribute instead",
+                "namespace": "@blackbyte.sugar.js.dom.feature",
+                "status": "stable",
+                "snippet": {
+                    "label": "disableTitleTooltips();"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { disableTitleTooltips } from '@blackbyte/sugar/features';\ndisableTitleTooltips();"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "disableTitleTooltips.ts",
+                "extension": "ts",
+                "relPath": "src/js/feature/disableTitleTooltips.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.when.whenVisible": {
@@ -31934,16 +31962,19 @@
                     "type": {
                         "types": [
                             {
-                                "type": "TQuerySelectorLiveApi"
+                                "type": "SPromise",
+                                "of": [
+                                    "HTMLElement"
+                                ]
                             }
                         ],
-                        "raw": "TQuerySelectorLiveApi"
+                        "raw": "SPromise<HTMLElement>"
                     },
-                    "description": "An object with a cancel method to stop the query listening"
+                    "description": "An SPromise instance on which to listen for nodes using the \"node\" event"
                 },
                 "setting": {
-                    "$rootNode": {
-                        "name": "$rootNode",
+                    "rootNode": {
+                        "name": "rootNode",
                         "type": {
                             "types": [
                                 {
@@ -31956,8 +31987,22 @@
                         "default": "document",
                         "defaultStr": "document"
                     },
-                    "afterFirst": {
-                        "name": "afterFirst",
+                    "once": {
+                        "name": "once",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Boolean"
+                                }
+                            ],
+                            "raw": "Boolean"
+                        },
+                        "description": "If true, each observed nodes will be handled only once even if they are removed and reinjected in the dom",
+                        "default": true,
+                        "defaultStr": "true"
+                    },
+                    "[afterFirst]": {
+                        "name": "[afterFirst]",
                         "type": {
                             "types": [
                                 {
@@ -31966,8 +32011,22 @@
                             ],
                             "raw": "Function"
                         },
-                        "description": "A function to call after the first node has been found",
-                        "defaultStr": "undefined"
+                        "description": "A function that will be called once the first scan is done",
+                        "defaultStr": ""
+                    },
+                    "scopes": {
+                        "name": "scopes",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Boolean"
+                                }
+                            ],
+                            "raw": "Boolean"
+                        },
+                        "description": "If true, the selector will be searched inside elements with the \"s-scope\" attribute as scopes",
+                        "default": true,
+                        "defaultStr": "true"
                     },
                     "firstOnly": {
                         "name": "firstOnly",
@@ -31979,25 +32038,28 @@
                             ],
                             "raw": "Boolean"
                         },
-                        "description": "If true, the query will stop after the first node has been found",
+                        "description": "If true, the query will stop after the first matching node is found",
                         "default": false,
                         "defaultStr": "false"
                     },
-                    "when": {
-                        "name": "when",
+                    "[when]": {
+                        "name": "[when]",
                         "type": {
                             "types": [
                                 {
                                     "type": "TWhenTrigger"
+                                },
+                                {
+                                    "type": "string"
                                 }
                             ],
-                            "raw": "TWhenTrigger"
+                            "raw": "TWhenTrigger|string"
                         },
-                        "description": "A when trigger to wait for before executing the callback. Can be direct, inViewport, nearViewport, enterViewport, outOfViewport, interact, visible, domReady, stylesheetsReady or animationEnd",
-                        "defaultStr": "undefined"
+                        "description": "An optional when trigger or array of triggers to wait for before calling the callback with the detected node",
+                        "defaultStr": ""
                     },
-                    "disconnectedCallback": {
-                        "name": "disconnectedCallback",
+                    "[disconnectedCallback]": {
+                        "name": "[disconnectedCallback]",
                         "type": {
                             "types": [
                                 {
@@ -32006,8 +32068,25 @@
                             ],
                             "raw": "Function"
                         },
-                        "description": "A function to call when a node is disconnected from the dom",
-                        "defaultStr": "undefined"
+                        "description": "An optional callback function that will be called when a previously detected node is removed from the dom",
+                        "defaultStr": ""
+                    },
+                    "attributes": {
+                        "name": "attributes",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "array",
+                                    "of": [
+                                        "String"
+                                    ]
+                                }
+                            ],
+                            "raw": "String[]"
+                        },
+                        "description": "An optional array of attributes to monitor for changes (in addition to class and id)",
+                        "default": [],
+                        "defaultStr": "[]"
                     }
                 },
                 "platform": [
@@ -32021,12 +32100,12 @@
                 "status": "stable",
                 "snippet": {
                     "label": "querySelectorLive($1, $2)",
-                    "code": "querySelectorLive($1, \\$elm => {\n  $2\n});"
+                    "code": "querySelectorLive($1, \\$elm => {\n     $2\n});"
                 },
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { querySelectorLive } from '@blackbyte/sugar/dom'\nconst query = querySelectorLive('.my-cool-item', (node, api) => {\n  // do something here with the detected node\n  // call api.cancel if you want to stop listening for this selector\n  api.cancel();\n});\n// cancel the query manually when needed\nquery.cancel();"
+                        "code": "import { querySelectorLive } from '@lotsof/sugar/dom'\nconst query = querySelectorLive('.my-cool-item', (node, api) => {\n\t    // do something here with the detected node\n     // call api.cancel if you want to stop listening for this selector\n     api.cancel();\n});\n// cancel the query manually when needed\nquery.cancel();"
                     }
                 ],
                 "async": true,
@@ -32034,7 +32113,7 @@
                 "author": {
                     "name": "Olivier Bossel",
                     "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
+                    "url": "https://lotsof.dev"
                 },
                 "filename": "querySelectorLive.ts",
                 "extension": "ts",

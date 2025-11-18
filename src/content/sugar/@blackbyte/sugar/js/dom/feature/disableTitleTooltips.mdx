@@ -1,7 +1,7 @@
 ---
-title: 'scrollProperties'
+title: 'disableTitleTooltips'
 namespace: '@blackbyte.sugar.js.dom.feature'
-description: 'This feature allows you to automatically apply css properties on the element passed in settings depending on the scroll position. The properties that are applied are: - `--scroll-x`: The current scroll x position - `--scroll-y`: The current scroll y position'
+description: 'This function allows you to disable the ugly tooltips that displays when hover a link/image/etc... with a &quot;title&quot; attribute. If you want to support accessibility, make use of the &quot;aria-label&quot; attribute instead'
 type: 'Function'
 status: 'stable'
 since: '1.0.0'
@@ -9,7 +9,7 @@ platform: '[{"name":"js","description":""}]'
 author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"https://blackbyte.space"}'
 ---
 <div class="docmap -mdx">
-# scrollProperties
+# disableTitleTooltips
 <div class="docmap_metas">
 <div class="docmap_type"><span class="docmap_type-label">Type:</span><span class="docmap_type-value">Function</span></div>
 <div class="docmap_status"><span class="docmap_status-label">Status:</span><span class="docmap_status-value -stable">stable</span></div>
@@ -18,37 +18,17 @@ author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"http
 </div>
 <div class="docmap_namespace">@blackbyte.sugar.js.dom.feature</div>
 <div class="docmap_description typo-lead typo-format">
-This feature allows you to automatically apply css properties on the element passed in settings depending on the scroll position.
-The properties that are applied are:
-- `--scroll-x`: The current scroll x position
-- `--scroll-y`: The current scroll y position
-</div>
-<div class="docmap_params">
-## Params
-<ol class="docmap_list">
-<li class="docmap_item">
-<span class="docmap_name">settings</span><span class="docmap_default">&lcub;&rcub;</span> <span class="docmap_type">TScrollPropertiesSettings</span>
-<p class="docmap_description">The settings you want to override</p>
-</li>
-</ol>
+This function allows you to disable the ugly tooltips that displays when hover a link/image/etc... with a &quot;title&quot; attribute.
+If you want to support accessibility, make use of the &quot;aria-label&quot; attribute instead
 </div>
 <div class="docmap_examples">
 ## Example
 <s-code language="js" header>
 ```js
-import { scrollProperties } from '@blackbyte/sugar/features';
-scrollProperties();
+import { disableTitleTooltips } from '@blackbyte/sugar/features';
+disableTitleTooltips();
 ```
 </s-code>
-</div>
-<div class="docmap_settings">
-## Settings
-<ol class="docmap_list">
-<li class="docmap_item">
-<span class="docmap_name">$elm</span><span class="docmap_default">document&period;body</span> <span class="docmap_type">HTMLElement</span>
-<p class="docmap_description">The element on which to apply the css properties</p>
-</li>
-</ol>
 </div>
 <div class="docmap_author">
 ## Author

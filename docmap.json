@@ -32001,8 +32001,8 @@
                         "default": true,
                         "defaultStr": "true"
                     },
-                    "[afterFirst]": {
-                        "name": "[afterFirst]",
+                    "afterFirst": {
+                        "name": "afterFirst",
                         "type": {
                             "types": [
                                 {
@@ -32012,7 +32012,8 @@
                             "raw": "Function"
                         },
                         "description": "A function that will be called once the first scan is done",
-                        "defaultStr": ""
+                        "default": null,
+                        "defaultStr": "null"
                     },
                     "scopes": {
                         "name": "scopes",
@@ -32024,7 +32025,7 @@
                             ],
                             "raw": "Boolean"
                         },
-                        "description": "If true, the selector will be searched inside elements with the \"s-scope\" attribute as scopes",
+                        "description": "If true, the selector will be searched inside elements with the \"s-query-selector-live-scope\" attribute as scopes",
                         "default": true,
                         "defaultStr": "true"
                     },
@@ -32042,8 +32043,8 @@
                         "default": false,
                         "defaultStr": "false"
                     },
-                    "[when]": {
-                        "name": "[when]",
+                    "when": {
+                        "name": "when",
                         "type": {
                             "types": [
                                 {
@@ -32056,10 +32057,11 @@
                             "raw": "TWhenTrigger|string"
                         },
                         "description": "An optional when trigger or array of triggers to wait for before calling the callback with the detected node",
-                        "defaultStr": ""
+                        "default": null,
+                        "defaultStr": "null"
                     },
-                    "[disconnectedCallback]": {
-                        "name": "[disconnectedCallback]",
+                    "disconnectedCallback": {
+                        "name": "disconnectedCallback",
                         "type": {
                             "types": [
                                 {
@@ -32069,7 +32071,8 @@
                             "raw": "Function"
                         },
                         "description": "An optional callback function that will be called when a previously detected node is removed from the dom",
-                        "defaultStr": ""
+                        "default": null,
+                        "defaultStr": "null"
                     },
                     "attributes": {
                         "name": "attributes",

@@ -296,6 +296,176 @@
                 "relPath": "src/shared/url/gravatarUrl.ts",
                 "children": {}
             },
+            "@blackbyte.sugar.shared.url.getYoutubeVideoIdFromUrl": {
+                "id": "@blackbyte.sugar.shared.url.getYoutubeVideoIdFromUrl",
+                "name": "getYoutubeVideoIdFromUrl",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "url": {
+                        "name": "url",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The YouTube video URL",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "String"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "raw": "String|null"
+                    },
+                    "description": "The extracted video ID or null if not found"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "Return a YouTube video ID extracted from the given URL",
+                "namespace": "@blackbyte.sugar.shared.url",
+                "status": "stable",
+                "snippet": {
+                    "label": "getYoutubeVideoIdFromUrl($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { getYoutubeVideoIdFromUrl } from '@blackbyte/sugar/url';\ngetYoutubeVideoIdFromUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ'); // dQw4w9WgXcQ"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://stackoverflow.com/questions/3452546/how-do-i-get-the-youtube-video-id-from-a-url",
+                        "description": ""
+                    }
+                ],
+                "filename": "getYoutubeVideoIdFromUrl.ts",
+                "extension": "ts",
+                "relPath": "src/shared/url/getYoutubeVideoIdFromUrl.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.shared.url.getVimeoVideoIdFromUrl": {
+                "id": "@blackbyte.sugar.shared.url.getVimeoVideoIdFromUrl",
+                "name": "getVimeoVideoIdFromUrl",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "url": {
+                        "name": "url",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                }
+                            ],
+                            "raw": "String"
+                        },
+                        "description": "The Vimeo video URL",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "String"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "raw": "String|null"
+                    },
+                    "description": "The extracted video ID or null if not found"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "Return a Vimeo video ID extracted from the given URL",
+                "namespace": "@blackbyte.sugar.shared.url",
+                "status": "stable",
+                "snippet": {
+                    "label": "getVimeoVideoIdFromUrl($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { getVimeoVideoIdFromUrl } from '@blackbyte/sugar/url';\ngetVimeoVideoIdFromUrl('https://vimeo.com/123456789'); // 123456789"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://stackoverflow.com/questions/10488943/easy-way-to-get-vimeo-id-from-a-vimeo-url",
+                        "description": ""
+                    }
+                ],
+                "filename": "getVimeoVideoIdFromUrl.ts",
+                "extension": "ts",
+                "relPath": "src/shared/url/getVimeoVideoIdFromUrl.ts",
+                "children": {}
+            },
             "@blackbyte.sugar.shared.type.parseTypeString": {
                 "id": "@blackbyte.sugar.shared.type.parseTypeString",
                 "name": "parseTypeString",
@@ -5025,6 +5195,12 @@
                         "code": "import { toQueryString } from '@blackbyte/sugar/object'\nconsole.log(toQueryString({\n\tvalue1 : 'coco',\n\tvalue1 : 'plop'\n}));\n// => ?value1=coco&value2=plop"
                     }
                 ],
+                "changelog": [
+                    {
+                        "version": "1.0.0-beta.17",
+                        "description": "Added null/undefined value check"
+                    }
+                ],
                 "since": "1.0.0",
                 "todo": [
                     {
@@ -7067,6 +7243,82 @@
                 "filename": "decycle.ts",
                 "extension": "ts",
                 "relPath": "src/shared/object/decycle.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.shared.object.cloneInstance": {
+                "id": "@blackbyte.sugar.shared.object.cloneInstance",
+                "name": "cloneInstance",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "instance": {
+                        "name": "instance",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Object"
+                                }
+                            ],
+                            "raw": "Object"
+                        },
+                        "description": "The object instance to clone",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "Object"
+                            }
+                        ],
+                        "raw": "Object"
+                    },
+                    "description": "The cloned object"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to clone an object instance.",
+                "namespace": "@blackbyte.sugar.shared.object",
+                "status": "stable",
+                "snippet": {
+                    "label": "cloneInstance($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { cloneInstance } from '@blackbyte/sugar/object';\nconst myInstance = new MyClass();\nconst myInstanceClone = cloneInstance(myInstance);"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "cloneInstance.ts",
+                "extension": "ts",
+                "relPath": "src/shared/object/cloneInstance.ts",
                 "children": {}
             },
             "@blackbyte.sugar.shared.object.clone": {
@@ -13456,7 +13708,7 @@
                         "description": ""
                     }
                 ],
-                "description": "This function allows you to get an array of common media file extensions with or without the dot",
+                "description": "This function allows you to get an array of common media file extensions with or without the dot.\nThis includes image, video and audio file extensions.",
                 "namespace": "@blackbyte.sugar.shared.extension",
                 "status": "stable",
                 "snippet": {
@@ -18932,6 +19184,95 @@
                 "filename": "convertColor.ts",
                 "extension": "ts",
                 "relPath": "src/shared/color/convertColor.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.shared.color.applyModifiers": {
+                "id": "@blackbyte.sugar.shared.color.applyModifiers",
+                "name": "applyModifiers",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "input": {
+                        "name": "input",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Mixed"
+                                }
+                            ],
+                            "raw": "Mixed"
+                        },
+                        "description": "The input color to apply modifiers on",
+                        "defaultStr": ""
+                    },
+                    "[modifiers]": {
+                        "name": "[modifiers]",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "TApplyModifiersModifiers"
+                                }
+                            ],
+                            "raw": "TApplyModifiersModifiers"
+                        },
+                        "description": "The modifiers to apply",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "TApplyModifiersModifiersResult"
+                            }
+                        ],
+                        "raw": "TApplyModifiersModifiersResult"
+                    },
+                    "description": "The converted color object"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "This function allows you to apply some modifiers to a color.\nSupported modifiers are:\n- lightness {0-100}\n- lighten {0-100}\n- darken {0-100}\n- saturation {0-100}\n- saturate {0-100}\n- desaturate {0-100}\n- hue {0-360}\n- spin {0-360}\n- alpha {0-100}",
+                "namespace": "@blackbyte.sugar.shared.color",
+                "status": "stable",
+                "snippet": {
+                    "label": "applyModifiers($1, $2)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { applyModifiers } from '@blackbyte/sugar/color';\napplyModifiers('rgba(10,20,30,100)', { lighten: 10 }); // => { r: 20, g: 30, b: 40, a: 100 }"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "applyModifiers.ts",
+                "extension": "ts",
+                "relPath": "src/shared/color/applyModifiers.ts",
                 "children": {}
             },
             "@blackbyte.sugar.shared.color.alphaToHex": {
@@ -28917,6 +29258,79 @@
                 "relPath": "src/js/dom/when/whenVisible.ts",
                 "children": {}
             },
+            "@blackbyte.sugar.js.dom.when.whenVideoReady": {
+                "id": "@blackbyte.sugar.js.dom.when.whenVideoReady",
+                "name": "whenVideoReady",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "$video": {
+                        "name": "$video",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLVideoElement"
+                                }
+                            ],
+                            "raw": "HTMLVideoElement"
+                        },
+                        "description": "The video to check the ready state",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "Promise"
+                            }
+                        ],
+                        "raw": "Promise"
+                    },
+                    "description": "The promise that will be resolved when the video is ready to play"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "Wait until the passed video is ready to play.\nIt checks if the video metadata has been loaded, and if not it waits for the `loadedmetadata` event.",
+                "namespace": "@blackbyte.sugar.js.dom.when",
+                "status": "stable",
+                "snippet": {
+                    "label": "whenVideoReady($1)",
+                    "code": "whenVideoReady($1).then(\\$video => {\n  $2\n});"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { whenVideoReady } from '@blackbyte/sugar/dom'\nwhenVideoReady($myCoolHTMLVideoElement).then(($video) => {\n  // do something when the video is ready to play\n});"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "whenVideoReady.ts",
+                "extension": "ts",
+                "relPath": "src/js/dom/when/whenVideoReady.ts",
+                "children": {}
+            },
             "@blackbyte.sugar.js.dom.when.whenTransitionEnd": {
                 "id": "@blackbyte.sugar.js.dom.when.whenTransitionEnd",
                 "name": "whenTransitionEnd",
@@ -29768,6 +30182,46 @@
                         "description": "An offset to detect sooner or later the element entering in the viewport",
                         "default": "'10px'",
                         "defaultStr": "'10px'"
+                    },
+                    "[whenIn]": {
+                        "name": "[whenIn]",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Function"
+                                }
+                            ],
+                            "raw": "Function"
+                        },
+                        "description": "A callback function to call when the element enter the viewport",
+                        "defaultStr": ""
+                    },
+                    "[whenOut]": {
+                        "name": "[whenOut]",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Function"
+                                }
+                            ],
+                            "raw": "Function"
+                        },
+                        "description": "A callback function to call when the element leave the viewport",
+                        "defaultStr": ""
+                    },
+                    "once": {
+                        "name": "once",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Boolean"
+                                }
+                            ],
+                            "raw": "Boolean"
+                        },
+                        "description": "Specify if the promise should be resolved only once (the first time the element enter the viewport)",
+                        "default": true,
+                        "defaultStr": "true"
                     }
                 },
                 "platform": [
@@ -31817,6 +32271,136 @@
                 "relPath": "src/js/dom/selection/clearSelection.ts",
                 "children": {}
             },
+            "@blackbyte.sugar.js.dom.scroll.unlockScroll": {
+                "id": "@blackbyte.sugar.js.dom.scroll.unlockScroll",
+                "name": "unlockScroll",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "$target": {
+                        "name": "$target",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLElement"
+                                },
+                                {
+                                    "type": "Window"
+                                }
+                            ],
+                            "raw": "HTMLElement|Window"
+                        },
+                        "description": "The target on which to lock the scroll (default to window)",
+                        "default": "window",
+                        "defaultStr": "window"
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "Unlock the scroll of the page",
+                "namespace": "@blackbyte.sugar.js.dom.scroll",
+                "status": "stable",
+                "snippet": {
+                    "label": "unlockScroll()"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { unlockScroll } from '@blackbyte/sugar/dom'\nunlockScroll();"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "unlockScroll.ts",
+                "extension": "ts",
+                "relPath": "src/js/dom/scroll/unlockScroll.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.js.dom.scroll.lockScroll": {
+                "id": "@blackbyte.sugar.js.dom.scroll.lockScroll",
+                "name": "lockScroll",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "$target": {
+                        "name": "$target",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLElement"
+                                },
+                                {
+                                    "type": "Window"
+                                }
+                            ],
+                            "raw": "HTMLElement|Window"
+                        },
+                        "description": "The target on which to lock the scroll (default to window)",
+                        "default": "window",
+                        "defaultStr": "window"
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "Lock the scroll of the page",
+                "namespace": "@blackbyte.sugar.js.dom.scroll",
+                "status": "stable",
+                "snippet": {
+                    "label": "lockScroll()"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { lockScroll } from '@blackbyte/sugar/dom'\nlockScroll();"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "lockScroll.ts",
+                "extension": "ts",
+                "relPath": "src/js/dom/scroll/lockScroll.ts",
+                "children": {}
+            },
             "@blackbyte.sugar.js.dom.query.querySelectorUp": {
                 "id": "@blackbyte.sugar.js.dom.query.querySelectorUp",
                 "name": "querySelectorUp",
@@ -32121,6 +32705,97 @@
                 "filename": "querySelectorLive.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/query/querySelectorLive.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.js.dom.query.querySelectorAllUp": {
+                "id": "@blackbyte.sugar.js.dom.query.querySelectorAllUp",
+                "name": "querySelectorAllUp",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "$from": {
+                        "name": "$from",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLElement"
+                                }
+                            ],
+                            "raw": "HTMLElement"
+                        },
+                        "description": "The element to start from",
+                        "defaultStr": ""
+                    },
+                    "selector": {
+                        "name": "selector",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "String"
+                                },
+                                {
+                                    "type": "Function"
+                                }
+                            ],
+                            "raw": "String|Function"
+                        },
+                        "description": "A css selector to search for or a check function that will be used",
+                        "defaultStr": ""
+                    }
+                },
+                "return": {
+                    "type": {
+                        "types": [
+                            {
+                                "type": "array",
+                                "of": [
+                                    "HTMLElement"
+                                ]
+                            }
+                        ],
+                        "raw": "HTMLElement[]"
+                    },
+                    "description": "The elements found or an empty array"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "Go up the dom three to find all the elements that matches the passed selector",
+                "namespace": "@blackbyte.sugar.js.dom.query",
+                "status": "stable",
+                "snippet": {
+                    "label": "querySelectorAllUp($1, $2)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { querySelectorAllUp } from '@blackbyte/sugar/dom'\nconst closestElm =  querySelectorAllUp($elm, '.my-cool-class');\nif (closestElm) {\n  // we have found en element that matches the selector\n}\n// the selector param can be a function that need to return either true or false like so:\nquerySelectorAllUp($elm, (elm) => {\n  return elm.hasAttribute('my-cool-attribute')\n})"
+                    }
+                ],
+                "since": "1.0.0",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "filename": "querySelectorAllUp.ts",
+                "extension": "ts",
+                "relPath": "src/js/dom/query/querySelectorAllUp.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.query.querySelectorAll": {
@@ -34584,10 +35259,10 @@
                     "type": {
                         "types": [
                             {
-                                "type": "HTMLElement"
+                                "type": "Function"
                             }
                         ],
-                        "raw": "HTMLElement"
+                        "raw": "Function"
                     },
                     "description": "The passed HTMLElement"
                 },
@@ -35169,6 +35844,79 @@
                 "filename": "adoptStyleInShadowRoot.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/css/adoptStyleInShadowRoot.ts",
+                "children": {}
+            },
+            "@blackbyte.sugar.js.dom.css.drawVideoToCanvas": {
+                "id": "@blackbyte.sugar.js.dom.css.drawVideoToCanvas",
+                "name": "drawVideoToCanvas",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Function"
+                        }
+                    ],
+                    "raw": "Function"
+                },
+                "param": {
+                    "$video": {
+                        "name": "$video",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLVideoElement"
+                                }
+                            ],
+                            "raw": "HTMLVideoElement"
+                        },
+                        "description": "The video you want to draw into the canvas",
+                        "defaultStr": ""
+                    },
+                    "[$canvas]": {
+                        "name": "[$canvas]",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "HTMLCanvasElement"
+                                }
+                            ],
+                            "raw": "HTMLCanvasElement"
+                        },
+                        "description": "An optional canvas to draw into. If not provided, a new canvas will be created",
+                        "defaultStr": ""
+                    }
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    }
+                ],
+                "description": "Draw the current frame of a video into a canvas.",
+                "namespace": "@blackbyte.sugar.js.dom.css",
+                "status": "stable",
+                "snippet": {
+                    "label": "drawVideoToCanvas($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { drawVideoToCanvas } from '@blackbyte/sugar/js/dom';\nconst $canvas = drawVideoToCanvas($video);"
+                    }
+                ],
+                "since": "1.0.0-beta.21",
+                "todo": [
+                    {
+                        "priority": "normal",
+                        "description": "tests"
+                    }
+                ],
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com"
+                },
+                "filename": "drawVideoToCanvas.ts",
+                "extension": "ts",
+                "relPath": "src/js/dom/canvas/drawVideoToCanvas.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.cookie.setCookie": {

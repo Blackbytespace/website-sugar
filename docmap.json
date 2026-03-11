@@ -17456,6 +17456,12 @@
                     "email": "olivier.bossel@gmail.com",
                     "url": "https://blackbyte.space"
                 },
+                "see": [
+                    {
+                        "url": "https://www.npmjs.com/package/@vercel/stega",
+                        "description": ""
+                    }
+                ],
                 "filename": "stega.ts",
                 "extension": "ts",
                 "relPath": "src/shared/crypto/stega/stega.ts",
@@ -32991,6 +32997,12 @@
                     "email": "olivier.bossel@gmail.com",
                     "url": "https://blackbyte.space"
                 },
+                "see": [
+                    {
+                        "url": "https://www.npmjs.com/package/@vercel/stega",
+                        "description": ""
+                    }
+                ],
                 "filename": "queryStegaElementsLive.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/query/queryStegaElementsLive/queryStegaElementsLive.ts",

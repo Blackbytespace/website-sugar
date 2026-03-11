@@ -52,7 +52,7 @@ when you don&#39;t have the chance to use the custom elements API instead
 ## Example
 <s-code language="js" header>
 ```js
-import { querySelectorLive } from '@lotsof/sugar/dom'
+import { querySelectorLive } from '@blackbyte/sugar/dom'
 const query = querySelectorLive('.my-cool-item', (node, api) => {
 	    // do something here with the detected node
      // call api.cancel if you want to stop listening for this selector
@@ -79,15 +79,11 @@ query.cancel();
 <p class="docmap_description">A function that will be called once the first scan is done</p>
 </li>
 <li class="docmap_item">
-<span class="docmap_name">scopes</span><span class="docmap_default">true</span> <span class="docmap_type">Boolean</span>
-<p class="docmap_description">If true, the selector will be searched inside elements with the "s-query-selector-live-scope" attribute as scopes</p>
-</li>
-<li class="docmap_item">
 <span class="docmap_name">firstOnly</span><span class="docmap_default">false</span> <span class="docmap_type">Boolean</span>
 <p class="docmap_description">If true, the query will stop after the first matching node is found</p>
 </li>
 <li class="docmap_item">
-<span class="docmap_name">when</span><span class="docmap_default">-</span> <span class="docmap_type">TWhenTrigger&vert;string</span>
+<span class="docmap_name">when</span><span class="docmap_default">-</span> <span class="docmap_type">TWhenTrigger</span>
 <p class="docmap_description">An optional when trigger or array of triggers to wait for before calling the callback with the detected node</p>
 </li>
 <li class="docmap_item">

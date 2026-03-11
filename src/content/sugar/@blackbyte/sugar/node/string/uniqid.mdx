@@ -1,7 +1,7 @@
 ---
 title: 'uniqid'
 namespace: '@blackbyte.sugar.node.string'
-description: 'Generate a uniqid string of 8 bytes. Work using the [uniqid](https://www.npmjs.com/package/uniqid) npm package under the hood.'
+description: 'Generate a unique identifier string using UUID v4. Works using the [uuid](https://www.npmjs.com/package/uuid) npm package under the hood.'
 type: 'Function'
 status: 'stable'
 since: '1.0.0'
@@ -18,14 +18,14 @@ author: '{"name":"Olivier Bossel","email":"olivier.bossel@gmail.com","url":"http
 </div>
 <div class="docmap_namespace">@blackbyte.sugar.node.string</div>
 <div class="docmap_description typo-lead typo-format">
-Generate a uniqid string of 8 bytes. Work using the [uniqid](https://www.npmjs.com/package/uniqid) npm package under the hood.
+Generate a unique identifier string using UUID v4. Works using the [uuid](https://www.npmjs.com/package/uuid) npm package under the hood.
 </div>
 <div class="docmap_return">
 ## Return
 <ol class="docmap_list">
 <li class="docmap_item">
 <span class="docmap_default">-</span><span class="docmap_type">String</span>
-<p class="docmap_description">A 8 bytes uniqid string</p>
+<p class="docmap_description">A UUID v4 string &lpar;36 characters with dashes&rpar;</p>
 </li>
 </ol>
 </div>
@@ -34,7 +34,7 @@ Generate a uniqid string of 8 bytes. Work using the [uniqid](https://www.npmjs.c
 <s-code language="js" header>
 ```js
 import { uniqid } from '@blackbyte/sugar/string';
-console.log(uniqid()); // => 1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed
+console.log(uniqid()); // => "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed"
 ```
 </s-code>
 </div>

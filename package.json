@@ -23,7 +23,8 @@
     "@shikijs/primitive": "^4.0.2",
     "astro": "^6.2.1",
     "astro-compress": "^2.3.6",
-    "astro-purgecss": "^5.1.0",
+    "astro-purgecss": "^6.0.1",
+    "purgecss": "^8.0.0",
     "typescript": "^5.4.5",
     "vue": "^3.5.29"
   },

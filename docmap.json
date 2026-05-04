@@ -28981,7 +28981,7 @@
                 "example": [
                     {
                         "language": "js",
-                        "code": "import { isDarkMode } from '@blackbyte/sugar/is'\nif ( isDarkMode()) {\n  // do something cool\n}"
+                        "code": "import { isDarkMode } from '@blackbyte/sugar/is'\nif (isDarkMode()) {\n  // do something cool\n}"
                     }
                 ],
                 "since": "1.0.0",
@@ -34010,13 +34010,19 @@
                         "type": {
                             "types": [
                                 {
+                                    "type": "NodeListOf",
+                                    "of": [
+                                        "HTMLElement"
+                                    ]
+                                },
+                                {
                                     "type": "array",
                                     "of": [
                                         "HTMLElement"
                                     ]
                                 }
                             ],
-                            "raw": "HTMLElement[]"
+                            "raw": "NodeListOf<HTMLElement>|HTMLElement[]"
                         },
                         "description": "The elements list to search in",
                         "defaultStr": ""

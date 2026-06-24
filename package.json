@@ -2,7 +2,7 @@
   "private": true,
   "name": "@blackbyte/website-sugar",
   "type": "module",
-  "version": "1.0.0-beta.36",
+  "version": "1.0.0-beta.39",
   "repository": {
     "url": "https://github.com/blackbytespace/monorepo"
   },
@@ -13,7 +13,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "doc.build": "(cd ../sugar && npm run doc.build)",
-    "deploy": "npm run doc.build && npm run build && rsync -azP --delete ./dist/ fe0mt_blackbyte@fe0mt.ftp.infomaniak.com:sites/sugar.blackbyte.space/"
+    "deploy": "npm run doc.build && npm run build && rsync -azP --delete ./dist/ 0y66vz_blackbyte@0y66vz.ftp.infomaniak.com:sites/sugar.blackbyte.space/"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",
@@ -24,6 +24,7 @@
     "astro": "^6.2.1",
     "astro-compress": "^2.3.6",
     "astro-purgecss": "^6.0.1",
+    "marked": "^9.1.6",
     "purgecss": "^8.0.0",
     "typescript": "^5.4.5",
     "vue": "^3.5.29"

@@ -17998,6 +17998,218 @@
                     }
                 }
             },
+            "@blackbyte.sugar.shared.crypto.bcrypt": {
+                "id": "@blackbyte.sugar.shared.crypto.bcrypt",
+                "name": "bcrypt",
+                "type": {
+                    "types": [
+                        {
+                            "type": "Object"
+                        }
+                    ],
+                    "raw": "Object"
+                },
+                "platform": [
+                    {
+                        "name": "js",
+                        "description": ""
+                    },
+                    {
+                        "name": "node",
+                        "description": ""
+                    }
+                ],
+                "description": "Expose two function named &quot;encrypt&quot; that you can use to process your content using the bcrypt algorithm",
+                "namespace": "@blackbyte.sugar.shared.crypto",
+                "status": "stable",
+                "snippet": {
+                    "label": "bcrypt.encrypt($1)"
+                },
+                "example": [
+                    {
+                        "language": "js",
+                        "code": "import { bcrypt } from '@blackbyte/sugar/crypto';\nbcrypt.encrypt('hello world');"
+                    }
+                ],
+                "since": "1.0.0",
+                "author": {
+                    "name": "Olivier Bossel",
+                    "email": "olivier.bossel@gmail.com",
+                    "url": "https://blackbyte.space"
+                },
+                "see": [
+                    {
+                        "url": "https://www.npmjs.com/package/bcryptjs?activeTab=readme",
+                        "description": ""
+                    }
+                ],
+                "filename": "bcrypt.ts",
+                "extension": "ts",
+                "relPath": "src/shared/crypto/bcrypt/bcrypt.ts",
+                "children": {
+                    "encrypt": {
+                        "id": "s0d1117670b9d4c1f2728756eca3942963b8c453f2eec046e877888ee4b97570d",
+                        "name": "encrypt",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Function"
+                                }
+                            ],
+                            "raw": "Function"
+                        },
+                        "param": {
+                            "message": {
+                                "name": "message",
+                                "type": {
+                                    "types": [
+                                        {
+                                            "type": "String"
+                                        }
+                                    ],
+                                    "raw": "String"
+                                },
+                                "description": "The message to encrypt",
+                                "defaultStr": ""
+                            }
+                        },
+                        "return": {
+                            "type": {
+                                "types": [
+                                    {
+                                        "type": "String"
+                                    }
+                                ],
+                                "raw": "String"
+                            },
+                            "description": "The encrypted string"
+                        },
+                        "description": "Encrypt",
+                        "author": {
+                            "name": "Olivier Bossel",
+                            "email": "olivier.bossel@gmail.com",
+                            "url": "https://blackbyte.space"
+                        }
+                    },
+                    "comparesync": {
+                        "id": "s25eb91ee0acd247f46e253bcdb1d1dfcff96585c4bf80d6b9f16e80d2d033e7d",
+                        "name": "compareSync",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Function"
+                                }
+                            ],
+                            "raw": "Function"
+                        },
+                        "param": {
+                            "message": {
+                                "name": "message",
+                                "type": {
+                                    "types": [
+                                        {
+                                            "type": "String"
+                                        }
+                                    ],
+                                    "raw": "String"
+                                },
+                                "description": "The message to compare",
+                                "defaultStr": ""
+                            },
+                            "hash": {
+                                "name": "hash",
+                                "type": {
+                                    "types": [
+                                        {
+                                            "type": "String"
+                                        }
+                                    ],
+                                    "raw": "String"
+                                },
+                                "description": "The hash to compare against",
+                                "defaultStr": ""
+                            }
+                        },
+                        "return": {
+                            "type": {
+                                "types": [
+                                    {
+                                        "type": "Boolean"
+                                    }
+                                ],
+                                "raw": "Boolean"
+                            },
+                            "description": "True if the message matches the hash, false otherwise"
+                        },
+                        "description": "Compare synchronously",
+                        "author": {
+                            "name": "Olivier Bossel",
+                            "email": "olivier.bossel@gmail.com",
+                            "url": "https://blackbyte.space"
+                        }
+                    },
+                    "compare": {
+                        "id": "sbe760ffcbf8756981a91634731c371aae73810dac18350270a9ba26171717783",
+                        "name": "compare",
+                        "type": {
+                            "types": [
+                                {
+                                    "type": "Function"
+                                }
+                            ],
+                            "raw": "Function"
+                        },
+                        "param": {
+                            "message": {
+                                "name": "message",
+                                "type": {
+                                    "types": [
+                                        {
+                                            "type": "String"
+                                        }
+                                    ],
+                                    "raw": "String"
+                                },
+                                "description": "The message to compare",
+                                "defaultStr": ""
+                            },
+                            "hash": {
+                                "name": "hash",
+                                "type": {
+                                    "types": [
+                                        {
+                                            "type": "String"
+                                        }
+                                    ],
+                                    "raw": "String"
+                                },
+                                "description": "The hash to compare against",
+                                "defaultStr": ""
+                            }
+                        },
+                        "return": {
+                            "type": {
+                                "types": [
+                                    {
+                                        "type": "Promise",
+                                        "of": [
+                                            "Boolean"
+                                        ]
+                                    }
+                                ],
+                                "raw": "Promise<Boolean>"
+                            },
+                            "description": "A promise that resolves to true if the message matches the hash, false otherwise"
+                        },
+                        "description": "Compare asynchronously",
+                        "author": {
+                            "name": "Olivier Bossel",
+                            "email": "olivier.bossel@gmail.com",
+                            "url": "https://blackbyte.space"
+                        }
+                    }
+                }
+            },
             "@blackbyte.sugar.shared.crypto.base64": {
                 "id": "@blackbyte.sugar.shared.crypto.base64",
                 "name": "base64",
@@ -32606,37 +32818,6 @@
                 "relPath": "src/js/dom/selection/clearSelection/clearSelection.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.selection.clearSelection.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.selection.clearSelection.browser.test.ts",
-                "name": "clearSelection.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for clearSelection",
-                "namespace": "@blackbyte.sugar.js.dom.selection",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "clearSelection.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/selection/clearSelection/clearSelection.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.scroll.unlockScroll": {
                 "id": "@blackbyte.sugar.js.dom.scroll.unlockScroll",
                 "name": "unlockScroll",
@@ -32702,37 +32883,6 @@
                 "relPath": "src/js/dom/scroll/unlockScroll/unlockScroll.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.scroll.unlockScroll.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.scroll.unlockScroll.browser.test.ts",
-                "name": "unlockScroll.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for unlockScroll",
-                "namespace": "@blackbyte.sugar.js.dom.scroll",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "unlockScroll.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/scroll/unlockScroll/unlockScroll.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.scroll.lockScroll": {
                 "id": "@blackbyte.sugar.js.dom.scroll.lockScroll",
                 "name": "lockScroll",
@@ -32796,37 +32946,6 @@
                 "filename": "lockScroll.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/scroll/lockScroll/lockScroll.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.scroll.lockScroll.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.scroll.lockScroll.browser.test.ts",
-                "name": "lockScroll.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for lockScroll",
-                "namespace": "@blackbyte.sugar.js.dom.scroll",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "lockScroll.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/scroll/lockScroll/lockScroll.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.query.queryStegaElementsLive": {
@@ -33094,37 +33213,6 @@
                 "filename": "querySelectorUp.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/query/querySelectorUp/querySelectorUp.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.query.querySelectorUp.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.querySelectorUp.browser.test.ts",
-                "name": "querySelectorUp.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for querySelectorUp",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "querySelectorUp.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/querySelectorUp/querySelectorUp.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.query.querySelectorLive": {
@@ -33419,37 +33507,6 @@
                 "relPath": "src/js/dom/query/querySelectorAllUp/querySelectorAllUp.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.query.querySelectorAllUp.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.querySelectorAllUp.browser.test.ts",
-                "name": "querySelectorAllUp.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for querySelectorAllUp",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "querySelectorAllUp.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/querySelectorAllUp/querySelectorAllUp.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.query.querySelectorAll": {
                 "id": "@blackbyte.sugar.js.dom.query.querySelectorAll",
                 "name": "querySelectorAll",
@@ -33580,37 +33637,6 @@
                 "filename": "querySelectorAll.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/query/querySelectorAll/querySelectorAll.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.query.querySelectorAll.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.querySelectorAll.browser.test.ts",
-                "name": "querySelectorAll.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for querySelectorAll",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "querySelectorAll.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/querySelectorAll/querySelectorAll.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.query.querySelector": {
@@ -33830,37 +33856,6 @@
                 "relPath": "src/js/dom/query/previousElement/previousElement.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.query.previousElement.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.previousElement.browser.test.ts",
-                "name": "previousElement.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for previousElement",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "previousElement.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/previousElement/previousElement.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.query.nextElement": {
                 "id": "@blackbyte.sugar.js.dom.query.nextElement",
                 "name": "nextElement",
@@ -33947,37 +33942,6 @@
                 "filename": "nextElement.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/query/nextElement/nextElement.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.query.nextElement.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.nextElement.browser.test.ts",
-                "name": "nextElement.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for nextElement",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "nextElement.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/nextElement/nextElement.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.query.nearestElement": {
@@ -34113,37 +34077,6 @@
                 "relPath": "src/js/dom/query/nearestElement/nearestElement.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.query.nearestElement.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.nearestElement.browser.test.ts",
-                "name": "nearestElement.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for nearestElement",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "nearestElement.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/nearestElement/nearestElement.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.query.matches": {
                 "id": "@blackbyte.sugar.js.dom.query.matches",
                 "name": "matches",
@@ -34235,37 +34168,6 @@
                 "relPath": "src/js/dom/query/matches/matches.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.query.matches.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.matches.browser.test.ts",
-                "name": "matches.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for matches",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "matches.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/matches/matches.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.query.elementsInViewport": {
                 "id": "@blackbyte.sugar.js.dom.query.elementsInViewport",
                 "name": "elementsInViewport",
@@ -34354,37 +34256,6 @@
                 "relPath": "src/js/dom/query/elementsInViewport/elementsInViewport.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.query.elementsInViewport.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.elementsInViewport.browser.test.ts",
-                "name": "elementsInViewport.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for elementsInViewport",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "elementsInViewport.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/elementsInViewport/elementsInViewport.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.query.closestScrollableElement": {
                 "id": "@blackbyte.sugar.js.dom.query.closestScrollableElement",
                 "name": "closestScrollableElement",
@@ -34460,37 +34331,6 @@
                 "relPath": "src/js/dom/query/closestScrollableElement/closestScrollableElement.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.query.closestScrollableElement.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.closestScrollableElement.browser.test.ts",
-                "name": "closestScrollableElement.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for closestScrollableElement",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "closestScrollableElement.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/closestScrollableElement/closestScrollableElement.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.query.closestNotVisibleElement": {
                 "id": "@blackbyte.sugar.js.dom.query.closestNotVisibleElement",
                 "name": "closestNotVisibleElement",
@@ -34564,37 +34404,6 @@
                 "filename": "closestNotVisibleElement.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/query/closestNotVisibleElement/closestNotVisibleElement.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.query.closestNotVisibleElement.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.closestNotVisibleElement.browser.test.ts",
-                "name": "closestNotVisibleElement.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for closestNotVisibleElement",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "closestNotVisibleElement.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/closestNotVisibleElement/closestNotVisibleElement.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.query.closestElement": {
@@ -34685,37 +34494,6 @@
                 "relPath": "src/js/dom/query/closestElement/closestElement.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.query.closestElement.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.query.closestElement.browser.test.ts",
-                "name": "closestElement.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for closestElement (alias for querySelectorUp)",
-                "namespace": "@blackbyte.sugar.js.dom.query",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "closestElement.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/query/closestElement/closestElement.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.position.positionFromEvent": {
                 "id": "@blackbyte.sugar.js.dom.position.positionFromEvent",
                 "name": "positionFromEvent",
@@ -34792,37 +34570,6 @@
                 "filename": "positionFromEvent.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/position/positionFromEvent/positionFromEvent.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.position.positionFromEvent.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.position.positionFromEvent.browser.test.ts",
-                "name": "positionFromEvent.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for positionFromEvent",
-                "namespace": "@blackbyte.sugar.js.dom.position",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "positionFromEvent.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/position/positionFromEvent/positionFromEvent.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.on.onSwipe": {
@@ -35078,37 +34825,6 @@
                 "relPath": "src/js/dom/on/onScrollEnd/onScrollEnd.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.on.onScrollEnd.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.on.onScrollEnd.browser.test.ts",
-                "name": "onScrollEnd.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for onScrollEnd",
-                "namespace": "@blackbyte.sugar.js.dom.on",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "onScrollEnd.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/on/onScrollEnd/onScrollEnd.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.on.onDrag": {
                 "id": "@blackbyte.sugar.js.dom.on.onDrag",
                 "name": "onDrag",
@@ -35215,37 +34931,6 @@
                 "relPath": "src/js/dom/on/onDrag/onDrag.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.on.onDrag.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.on.onDrag.browser.test.ts",
-                "name": "onDrag.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser tests for onDrag module - drag gesture detection with mouse and touch\nTests real browser event handling, position tracking, speed calculations, and DOM manipulation",
-                "namespace": "@blackbyte.sugar.js.dom.on",
-                "status": "stable",
-                "since": "1.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "onDrag.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/on/onDrag/onDrag.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.offset.offsetFromViewport": {
                 "id": "@blackbyte.sugar.js.dom.offset.offsetFromViewport",
                 "name": "offsetFromViewport",
@@ -35316,37 +35001,6 @@
                 "filename": "offsetFromViewport.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/offset/offsetFromViewport/offsetFromViewport.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.offset.offsetFromViewport.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.offset.offsetFromViewport.browser.test.ts",
-                "name": "offsetFromViewport.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for offsetFromViewport",
-                "namespace": "@blackbyte.sugar.js.dom.offset",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "offsetFromViewport.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/offset/offsetFromViewport/offsetFromViewport.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.offset.offsetFromParent": {
@@ -35421,37 +35075,6 @@
                 "relPath": "src/js/dom/offset/offsetFromParent/offsetFromParent.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.offset.offsetFromParent.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.offset.offsetFromParent.browser.test.ts",
-                "name": "offsetFromParent.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for offsetFromParent",
-                "namespace": "@blackbyte.sugar.js.dom.offset",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "offsetFromParent.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/offset/offsetFromParent/offsetFromParent.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.input.cursorToEnd": {
                 "id": "@blackbyte.sugar.js.dom.input.cursorToEnd",
                 "name": "cursorToEnd",
@@ -35519,37 +35142,6 @@
                 "relPath": "src/js/dom/input/cursorToEnd/cursorToEnd.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.input.cursorToEnd.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.input.cursorToEnd.browser.test.ts",
-                "name": "cursorToEnd.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for cursorToEnd",
-                "namespace": "@blackbyte.sugar.js.dom.input",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "cursorToEnd.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/input/cursorToEnd/cursorToEnd.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.input.autoResize": {
                 "id": "@blackbyte.sugar.js.dom.input.autoResize",
                 "name": "autoResize",
@@ -35615,37 +35207,6 @@
                 "filename": "autoResize.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/input/autoResize/autoResize.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.input.autoResize.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.input.autoResize.browser.test.ts",
-                "name": "autoResize.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for autoResize",
-                "namespace": "@blackbyte.sugar.js.dom.input",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "autoResize.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/input/autoResize/autoResize.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.inject.injectStylesheet": {
@@ -35718,37 +35279,6 @@
                 "filename": "injectStylesheet.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/inject/injectStylesheet/injectStylesheet.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.inject.injectStylesheet.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.inject.injectStylesheet.browser.test.ts",
-                "name": "injectStylesheet.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for injectStylesheet",
-                "namespace": "@blackbyte.sugar.js.dom.inject",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "injectStylesheet.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/inject/injectStylesheet/injectStylesheet.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.inject.injectStyle": {
@@ -35868,37 +35398,6 @@
                 "relPath": "src/js/dom/inject/injectStyle/injectStyle.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.inject.injectStyle.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.inject.injectStyle.browser.test.ts",
-                "name": "injectStyle.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for injectStyle",
-                "namespace": "@blackbyte.sugar.js.dom.inject",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "injectStyle.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/inject/injectStyle/injectStyle.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.inject.injectScript": {
                 "id": "@blackbyte.sugar.js.dom.inject.injectScript",
                 "name": "injectScript",
@@ -35969,37 +35468,6 @@
                 "filename": "injectScript.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/inject/injectScript/injectScript.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.inject.injectScript.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.inject.injectScript.browser.test.ts",
-                "name": "injectScript.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for injectScript",
-                "namespace": "@blackbyte.sugar.js.dom.inject",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "injectScript.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/inject/injectScript/injectScript.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.inject.injectIframeContent": {
@@ -36076,37 +35544,6 @@
                 "relPath": "src/js/dom/inject/injectIframeContent/injectIframeContent.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.inject.injectIframeContent.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.inject.injectIframeContent.browser.test.ts",
-                "name": "injectIframeContent.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for injectIframeContent",
-                "namespace": "@blackbyte.sugar.js.dom.inject",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "injectIframeContent.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/inject/injectIframeContent/injectIframeContent.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.inject.injectHtml": {
                 "id": "@blackbyte.sugar.js.dom.inject.injectHtml",
                 "name": "injectHtml",
@@ -36179,37 +35616,6 @@
                 "filename": "injectHtml.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/inject/injectHtml/injectHtml.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.inject.injectHtml.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.inject.injectHtml.browser.test.ts",
-                "name": "injectHtml.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for injectHtml",
-                "namespace": "@blackbyte.sugar.js.dom.inject",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "injectHtml.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/inject/injectHtml/injectHtml.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.iframe.iframeAutoSize": {
@@ -36319,37 +35725,6 @@
                 "relPath": "src/js/dom/iframe/iframeAutoSize/iframeAutoSize.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.iframe.iframeAutoSize.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.iframe.iframeAutoSize.browser.test.ts",
-                "name": "iframeAutoSize.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for iframeAutoSize",
-                "namespace": "@blackbyte.sugar.js.dom.iframe",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "iframeAutoSize.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/iframe/iframeAutoSize/iframeAutoSize.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.form.getFormValues": {
                 "id": "@blackbyte.sugar.js.dom.form.getFormValues",
                 "name": "getFormValues",
@@ -36420,37 +35795,6 @@
                 "filename": "getFormValues.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/form/getFormValues/getFormValues.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.form.getFormValues.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.form.getFormValues.browser.test.ts",
-                "name": "getFormValues.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for getFormValues",
-                "namespace": "@blackbyte.sugar.js.dom.form",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "getFormValues.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/form/getFormValues/getFormValues.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.form.generateIdFromForm": {
@@ -36526,37 +35870,6 @@
                 "relPath": "src/js/dom/form/generateIdFromForm/generateIdFromForm.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.form.generateIdFromForm.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.form.generateIdFromForm.browser.test.ts",
-                "name": "generateIdFromForm.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for generateIdFromForm",
-                "namespace": "@blackbyte.sugar.js.dom.form",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "generateIdFromForm.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/form/generateIdFromForm/generateIdFromForm.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.form.disablePasswordManagerAttributes": {
                 "id": "@blackbyte.sugar.js.dom.form.disablePasswordManagerAttributes",
                 "name": "disablePasswordManagerAttributes",
@@ -36612,37 +35925,6 @@
                 "filename": "disablePasswordManagerAttributes.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/form/disablePasswordManagerAttributes/disablePasswordManagerAttributes.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.form.disablePasswordManagerAttributes.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.form.disablePasswordManagerAttributes.browser.test.ts",
-                "name": "disablePasswordManagerAttributes.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for disablePasswordManagerAttributes",
-                "namespace": "@blackbyte.sugar.js.dom.form",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "disablePasswordManagerAttributes.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/form/disablePasswordManagerAttributes/disablePasswordManagerAttributes.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.event.viewportEvents": {
@@ -36829,37 +36111,6 @@
                 "relPath": "src/js/dom/distance/scrollTop/scrollTop.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.distance.scrollTop.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.distance.scrollTop.browser.test.ts",
-                "name": "scrollTop.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for scrollTop",
-                "namespace": "@blackbyte.sugar.js.dom.distance",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "scrollTop.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/distance/scrollTop/scrollTop.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.distance.scrollLeft": {
                 "id": "@blackbyte.sugar.js.dom.distance.scrollLeft",
                 "name": "scrollLeft",
@@ -36904,37 +36155,6 @@
                 "filename": "scrollLeft.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/distance/scrollLeft/scrollLeft.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.distance.scrollLeft.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.distance.scrollLeft.browser.test.ts",
-                "name": "scrollLeft.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for scrollLeft",
-                "namespace": "@blackbyte.sugar.js.dom.distance",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "scrollLeft.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/distance/scrollLeft/scrollLeft.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.distance.distanceFromElementTopToViewportTop": {
@@ -37003,37 +36223,6 @@
                 "relPath": "src/js/dom/distance/distanceFromElementTopToViewportTop/distanceFromElementTopToViewportTop.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.distance.distanceFromElementTopToViewportTop.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.distance.distanceFromElementTopToViewportTop.browser.test.ts",
-                "name": "distanceFromElementTopToViewportTop.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for distanceFromElementTopToViewportTop",
-                "namespace": "@blackbyte.sugar.js.dom.distance",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "distanceFromElementTopToViewportTop.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/distance/distanceFromElementTopToViewportTop/distanceFromElementTopToViewportTop.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.distance.distanceFromElementTopToViewportBottom": {
                 "id": "@blackbyte.sugar.js.dom.distance.distanceFromElementTopToViewportBottom",
                 "name": "distanceFromElementTopToViewportBottom",
@@ -37098,37 +36287,6 @@
                 "filename": "distanceFromElementTopToViewportBottom.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/distance/distanceFromElementTopToViewportBottom/distanceFromElementTopToViewportBottom.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.distance.distanceFromElementTopToViewportBottom.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.distance.distanceFromElementTopToViewportBottom.browser.test.ts",
-                "name": "distanceFromElementTopToViewportBottom.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for distanceFromElementTopToViewportBottom",
-                "namespace": "@blackbyte.sugar.js.dom.distance",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "distanceFromElementTopToViewportBottom.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/distance/distanceFromElementTopToViewportBottom/distanceFromElementTopToViewportBottom.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.css.stylesheetToString": {
@@ -37206,37 +36364,6 @@
                 "relPath": "src/js/dom/css/stylesheetToString/stylesheetToString.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.css.stylesheetToString.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.css.stylesheetToString.browser.test.ts",
-                "name": "stylesheetToString.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for stylesheetToString",
-                "namespace": "@blackbyte.sugar.js.dom.css",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "stylesheetToString.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/css/stylesheetToString/stylesheetToString.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.css.reloadStylesheets": {
                 "id": "@blackbyte.sugar.js.dom.css.reloadStylesheets",
                 "name": "reloadStylesheets",
@@ -37293,37 +36420,6 @@
                 "relPath": "src/js/dom/css/reloadStylesheets/reloadStylesheets.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.dom.css.reloadStylesheets.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.css.reloadStylesheets.browser.test.ts",
-                "name": "reloadStylesheets.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for reloadStylesheets",
-                "namespace": "@blackbyte.sugar.js.dom.css",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "reloadStylesheets.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/css/reloadStylesheets/reloadStylesheets.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.dom.css.readCssDataFrom": {
                 "id": "@blackbyte.sugar.js.dom.css.readCssDataFrom",
                 "name": "readCssDataFrom",
@@ -37378,37 +36474,6 @@
                 "filename": "readCssDataFrom.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/css/readCssDataFrom/readCssDataFrom.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.css.readCssDataFrom.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.css.readCssDataFrom.browser.test.ts",
-                "name": "readCssDataFrom.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for readCssDataFrom",
-                "namespace": "@blackbyte.sugar.js.dom.css",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "readCssDataFrom.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/css/readCssDataFrom/readCssDataFrom.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.css.adoptStyleInShadowRoot": {
@@ -37494,37 +36559,6 @@
                 "filename": "adoptStyleInShadowRoot.ts",
                 "extension": "ts",
                 "relPath": "src/js/dom/css/adoptStyleInShadowRoot/adoptStyleInShadowRoot.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.dom.css.adoptStyleInShadowRoot.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.dom.css.adoptStyleInShadowRoot.browser.test.ts",
-                "name": "adoptStyleInShadowRoot.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for adoptStyleInShadowRoot",
-                "namespace": "@blackbyte.sugar.js.dom.css",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "adoptStyleInShadowRoot.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/dom/css/adoptStyleInShadowRoot/adoptStyleInShadowRoot.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.dom.css.drawVideoToCanvas": {
@@ -37799,37 +36833,6 @@
                 "relPath": "src/js/cookie/setCookie/setCookie.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.cookie.setCookie.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.cookie.setCookie.browser.test.ts",
-                "name": "setCookie.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for setCookie — sets a browser cookie with optional\nconfiguration (path, expires, max-age, secure, samesite, httpOnly).",
-                "namespace": "@blackbyte.sugar.js.cookie",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "setCookie.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/cookie/setCookie/setCookie.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.cookie.getCookie": {
                 "id": "@blackbyte.sugar.js.cookie.getCookie",
                 "name": "getCookie",
@@ -37900,37 +36903,6 @@
                 "filename": "getCookie.ts",
                 "extension": "ts",
                 "relPath": "src/js/cookie/getCookie/getCookie.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.cookie.getCookie.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.cookie.getCookie.browser.test.ts",
-                "name": "getCookie.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for getCookie — reads and JSON-parses a cookie value\nfrom document.cookie by name.",
-                "namespace": "@blackbyte.sugar.js.cookie",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "getCookie.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/cookie/getCookie/getCookie.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.cookie.deleteCookie": {
@@ -38005,37 +36977,6 @@
                 "relPath": "src/js/cookie/deleteCookie/deleteCookie.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.cookie.deleteCookie.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.cookie.deleteCookie.browser.test.ts",
-                "name": "deleteCookie.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for deleteCookie — removes a cookie by setting its\nmax-age to -1 via setCookie.",
-                "namespace": "@blackbyte.sugar.js.cookie",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "deleteCookie.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/cookie/deleteCookie/deleteCookie.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.convert.remToPx": {
                 "id": "@blackbyte.sugar.js.convert.remToPx",
                 "name": "remToPx",
@@ -38108,37 +37049,6 @@
                 "relPath": "src/js/convert/remToPx/remToPx.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.convert.remToPx.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.convert.remToPx.browser.test.ts",
-                "name": "remToPx.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for remToPx — converts rem values to px using the\ncomputed font-size of the root element (document.documentElement).",
-                "namespace": "@blackbyte.sugar.js.convert",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "remToPx.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/convert/remToPx/remToPx.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.convert.pxToRem": {
                 "id": "@blackbyte.sugar.js.convert.pxToRem",
                 "name": "pxToRem",
@@ -38209,37 +37119,6 @@
                 "filename": "pxToRem.ts",
                 "extension": "ts",
                 "relPath": "src/js/convert/pxToRem/pxToRem.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.convert.pxToRem.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.convert.pxToRem.browser.test.ts",
-                "name": "pxToRem.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for pxToRem — converts px values to rem using the\ncomputed font-size of the root element (document.documentElement).",
-                "namespace": "@blackbyte.sugar.js.convert",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "pxToRem.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/convert/pxToRem/pxToRem.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.convert.pxToEm": {
@@ -38328,37 +37207,6 @@
                 "relPath": "src/js/convert/pxToEm/pxToEm.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.convert.pxToEm.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.convert.pxToEm.browser.test.ts",
-                "name": "pxToEm.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for pxToEm — converts px values to em using the\ncomputed font-size of a reference element.",
-                "namespace": "@blackbyte.sugar.js.convert",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "pxToEm.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/convert/pxToEm/pxToEm.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.convert.emToPx": {
                 "id": "@blackbyte.sugar.js.convert.emToPx",
                 "name": "emToPx",
@@ -38445,68 +37293,6 @@
                 "relPath": "src/js/convert/emToPx/emToPx.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.convert.emToPx.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.convert.emToPx.browser.test.ts",
-                "name": "emToPx.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for emToPx — converts em values to px using the\ncomputed font-size of a reference element.",
-                "namespace": "@blackbyte.sugar.js.convert",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "emToPx.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/convert/emToPx/emToPx.browser.test.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.console.tagsmap.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.console.tagsmap.browser.test.ts",
-                "name": "tagsmap.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for tagsMap — the tag-&gt;function map used by parseHtml.",
-                "namespace": "@blackbyte.sugar.js.console",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "tagsmap.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/console/tagsmap/tagsmap.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.console.parseHtml": {
                 "id": "@blackbyte.sugar.js.console.parseHtml",
                 "name": "parseHtml",
@@ -38570,37 +37356,6 @@
                 "relPath": "src/js/console/parseHtml/parseHtml.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.console.parseHtml.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.console.parseHtml.browser.test.ts",
-                "name": "parseHtml.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for parseHtml — converts HTML-like tags into ANSI escape\nsequences suitable for styled console output.",
-                "namespace": "@blackbyte.sugar.js.console",
-                "status": "stable",
-                "since": "2.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "parseHtml.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/console/parseHtml/parseHtml.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.clipboard.readText": {
                 "id": "@blackbyte.sugar.js.clipboard.readText",
                 "name": "readText",
@@ -38659,37 +37414,6 @@
                 "relPath": "src/js/clipboard/readText/readText.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.clipboard.readText.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.clipboard.readText.browser.test.ts",
-                "name": "readText.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for readText — reads plain text from the clipboard via\nnavigator.clipboard.readText.",
-                "namespace": "@blackbyte.sugar.js.clipboard",
-                "status": "stable",
-                "since": "1.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "readText.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/clipboard/readText/readText.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.clipboard.readFile": {
                 "id": "@blackbyte.sugar.js.clipboard.readFile",
                 "name": "readFile",
@@ -38746,37 +37470,6 @@
                 "filename": "readFile.ts",
                 "extension": "ts",
                 "relPath": "src/js/clipboard/readFile/readFile.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.clipboard.readFile.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.clipboard.readFile.browser.test.ts",
-                "name": "readFile.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for readFile — reads clipboard contents as a\nClipboardItems array via navigator.clipboard.read.",
-                "namespace": "@blackbyte.sugar.js.clipboard",
-                "status": "stable",
-                "since": "1.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "readFile.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/clipboard/readFile/readFile.browser.test.ts",
                 "children": {}
             },
             "@blackbyte.sugar.js.clipboard.copyText": {
@@ -38858,37 +37551,6 @@
                 "relPath": "src/js/clipboard/copyText/copyText.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.clipboard.copyText.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.clipboard.copyText.browser.test.ts",
-                "name": "copyText.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for copyText — writes a string to the clipboard via\nnavigator.clipboard.writeText.",
-                "namespace": "@blackbyte.sugar.js.clipboard",
-                "status": "stable",
-                "since": "1.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "copyText.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/clipboard/copyText/copyText.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.clipboard.copyFile": {
                 "id": "@blackbyte.sugar.js.clipboard.copyFile",
                 "name": "copyFile",
@@ -38968,37 +37630,6 @@
                 "relPath": "src/js/clipboard/copyFile/copyFile.ts",
                 "children": {}
             },
-            "@blackbyte.sugar.js.clipboard.copyFile.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.clipboard.copyFile.browser.test.ts",
-                "name": "copyFile.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for copyFile — fetches a URL and copies the resulting\nblob to the clipboard via the Clipboard API.",
-                "namespace": "@blackbyte.sugar.js.clipboard",
-                "status": "stable",
-                "since": "1.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "copyFile.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/clipboard/copyFile/copyFile.browser.test.ts",
-                "children": {}
-            },
             "@blackbyte.sugar.js.clipboard.copyElement": {
                 "id": "@blackbyte.sugar.js.clipboard.copyElement",
                 "name": "copyElement",
@@ -39052,37 +37683,6 @@
                 "filename": "copyElement.ts",
                 "extension": "ts",
                 "relPath": "src/js/clipboard/copyElement/copyElement.ts",
-                "children": {}
-            },
-            "@blackbyte.sugar.js.clipboard.copyElement.browser.test.ts": {
-                "id": "@blackbyte.sugar.js.clipboard.copyElement.browser.test.ts",
-                "name": "copyElement.browser.test.ts",
-                "type": {
-                    "types": [
-                        {
-                            "type": "Test"
-                        }
-                    ],
-                    "raw": "Test"
-                },
-                "platform": [
-                    {
-                        "name": "js",
-                        "description": ""
-                    }
-                ],
-                "description": "Browser e2e tests for copyElement — verifies DOM selection and clipboard copy\nbehaviour using real browser APIs (Selection, Range, execCommand).",
-                "namespace": "@blackbyte.sugar.js.clipboard",
-                "status": "stable",
-                "since": "1.0.0",
-                "author": {
-                    "name": "Olivier Bossel",
-                    "email": "olivier.bossel@gmail.com",
-                    "url": "https://blackbyte.space"
-                },
-                "filename": "copyElement.browser.test.ts",
-                "extension": "browser",
-                "relPath": "src/js/clipboard/copyElement/copyElement.browser.test.ts",
                 "children": {}
             }
         }
